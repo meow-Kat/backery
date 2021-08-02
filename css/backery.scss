@@ -3,9 +3,15 @@ $black: #564d4d;
 $brownDark: #603210;
 $brownLight: #823d08;
 $orange: #feb768;
-
+h2,h3,h4,h5,h6,p{
+    color: $brownDark;
+}
+h1{
+    font-size: 64px;
+}
 .container {
     padding:0 40px;
+    position: relative;
 }
 
 nav {
@@ -28,17 +34,61 @@ nav {
     height: 100vh;
     background-color: aqua;
 }
-.firstSection{
-    .container{
-        display: flex;
-        .left{
-            margin-top: 74px;
-        }
-        .title{
-            margin-left: 28px;
-            h1{
-                
+main{
+    .firstSection{
+        .container{
+            display: flex;
+            .left{
+                margin-top: 74px;
+            }
+            .right{
+                .title{
+                    width: 100%;
+                    max-width: 1920px;
+                    position: relative;
+                    h1{ 
+                        margin-left: 28px;
+                        margin-top: 270px;
+                        &:nth-child(3){
+                            margin-top: 287px;
+                            text-align: center; 
+                        }
+                    }
+                    img{
+                        position: absolute;
+                        right: 0;
+                    }
+                }
+                .context{
+                    position: relative;
+                    img{
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                    }
+                    .textBackground{
+                        width: 850px;
+                        height: 490px;
+                        position: absolute;
+                        top: 139px;
+                        left: 600px;
+                        background-color: #fff;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        p{
+                        }
+                    }
+                    h5{
+                        height: 70px;
+                        position: absolute;
+                        top: 103px;
+                        right: 290px;
+                        writing-mode: vertical-lr;
+                    }
+                }
             }
         }
     }
+
 }

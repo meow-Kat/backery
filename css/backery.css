@@ -1,5 +1,14 @@
+h2, h3, h4, h5, h6, p {
+  color: #603210;
+}
+
+h1 {
+  font-size: 64px;
+}
+
 .container {
   padding: 0 40px;
+  position: relative;
 }
 
 nav div {
@@ -29,17 +38,72 @@ nav div {
   background-color: aqua;
 }
 
-.firstSection .container {
+main .firstSection .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.firstSection .container .left {
+main .firstSection .container .left {
   margin-top: 74px;
 }
 
-.firstSection .container .title {
+main .firstSection .container .right .title {
+  width: 100%;
+  max-width: 1920px;
+  position: relative;
+}
+
+main .firstSection .container .right .title h1 {
   margin-left: 28px;
+  margin-top: 270px;
+}
+
+main .firstSection .container .right .title h1:nth-child(3) {
+  margin-top: 287px;
+  text-align: center;
+}
+
+main .firstSection .container .right .title img {
+  position: absolute;
+  right: 0;
+}
+
+main .firstSection .container .right .context {
+  position: relative;
+}
+
+main .firstSection .container .right .context img {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+main .firstSection .container .right .context .textBackground {
+  width: 850px;
+  height: 490px;
+  position: absolute;
+  top: 139px;
+  left: 600px;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .firstSection .container .right .context h5 {
+  height: 70px;
+  position: absolute;
+  top: 103px;
+  right: 290px;
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
 }
 /*# sourceMappingURL=backery.css.map */
