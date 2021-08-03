@@ -11,6 +11,18 @@ h1 {
   font-size: 64px;
 }
 
+h2 {
+  font-size: 48px;
+}
+
+h3 {
+  font-size: 36px;
+}
+
+h4 {
+  font-size: 24px;
+}
+
 h5 {
   font-size: 22px;
 }
@@ -224,7 +236,7 @@ main .firstSection .container .interduce .context:nth-child(5) h5 {
   top: 113px;
 }
 
-main .secondSection {
+main .secondSection-group .secondSection {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -235,7 +247,7 @@ main .secondSection {
   height: 100vh;
 }
 
-main .secondSection h1 {
+main .secondSection-group .secondSection h1 {
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -246,7 +258,7 @@ main .secondSection h1 {
   z-index: 2;
 }
 
-main .secondSection .container .background {
+main .secondSection-group .secondSection .container .background {
   position: relative;
   width: 95.5vw;
   max-width: 1834px;
@@ -265,7 +277,56 @@ main .secondSection .container .background {
           align-items: center;
 }
 
-main .secondSection .container .background div:nth-child(2) {
+main .secondSection-group .secondSection .container .background div:nth-child(1) {
+  height: 31vw;
+}
+
+main .secondSection-group .secondSection .container .background div:nth-child(1) .text {
+  margin-left: 107px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+main .secondSection-group .secondSection .container .background div:nth-child(1) .text .date {
+  margin: 80px 0 60px;
+  padding-left: 30px;
+  border-left: 10px solid #ffd3ce;
+  border-radius: unset;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .secondSection-group .secondSection .container .background div:nth-child(1) .text .date span {
+  width: 24px;
+  border: 1px solid #603210;
+  margin: 0 13px;
+}
+
+main .secondSection-group .secondSection .container .background div:nth-child(1) .text a {
+  margin-top: 43px;
+  margin-left: auto;
+}
+
+main .secondSection-group .secondSection .container .background div:nth-child(1) .text a span {
+  margin-right: 14px;
+}
+
+main .secondSection-group .secondSection .container .background div:nth-child(2) {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
@@ -279,7 +340,47 @@ main .secondSection .container .background div:nth-child(2) {
   position: relative;
 }
 
-main .secondSection .container .background div:nth-child(2) img {
+main .secondSection-group .secondSection .container .background div:nth-child(2) img {
   width: 48.3vw;
+}
+
+main .secondSection-group .secondSection .container .background div:nth-child(2) .hashTag {
+  margin-left: unset;
+  margin-right: unset;
+  position: absolute;
+  bottom: 2.5vw;
+  left: 2.5vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .secondSection-group .secondSection .container .background div:nth-child(2) .hashTag a {
+  width: 76px;
+  height: 27px;
+  margin-left: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #823d08;
+}
+
+main .secondSection-group .secondSection .container .background div:nth-child(2) .hashTag a span {
+  color: #FFF;
+  font-size: 12px;
+}
+
+main .secondSection-group .secondSection .container .background div:nth-child(2) .hashTag a:nth-child(1) {
+  margin-left: unset;
+}
+
+main .secondSection-group .secondSection-swiper {
+  margin: 111px 0;
 }
 /*# sourceMappingURL=backery.css.map */
