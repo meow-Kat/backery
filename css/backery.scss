@@ -225,6 +225,7 @@ main {
                     div{
                         &:nth-child(1){
                             height: 31vw;
+                            max-height: 595px;
                             .text{
                                 margin-left: 107px;
                                 display: flex;
@@ -263,6 +264,7 @@ main {
                             position: relative;
                             img{
                                 width: 48.3vw;
+                                max-width: 927px;
                             }
                             .hashTag{
                                 margin-left: unset;

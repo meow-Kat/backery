@@ -279,6 +279,7 @@ main .secondSection-group .secondSection .container .background {
 
 main .secondSection-group .secondSection .container .background div:nth-child(1) {
   height: 31vw;
+  max-height: 595px;
 }
 
 main .secondSection-group .secondSection .container .background div:nth-child(1) .text {
@@ -342,6 +343,7 @@ main .secondSection-group .secondSection .container .background div:nth-child(2)
 
 main .secondSection-group .secondSection .container .background div:nth-child(2) img {
   width: 48.3vw;
+  max-width: 927px;
 }
 
 main .secondSection-group .secondSection .container .background div:nth-child(2) .hashTag {
