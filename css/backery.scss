@@ -53,6 +53,7 @@ main {
         position: relative;
         .powder {
             width: 56.5vw;
+            max-width: 1084px;
             position: absolute;
             right: 0;
             top: 0;
@@ -87,6 +88,7 @@ main {
             .logo {
                 margin-top: 74px;
                 width: 9.6vw;
+                max-width: 184px;
             }
             .interduce {
                 width: 100%;
@@ -108,6 +110,7 @@ main {
                     margin-left: 166px;
                     img {
                         width: 36vw;
+                        max-width: 692px;
                         position: absolute;
                         left: 0;
                         top: 0;
@@ -115,6 +118,7 @@ main {
                     }
                     .textBackground {
                         width: 44.3vw;
+                        max-width: 850px;
                         height: 490px;
                         position: absolute;
                         top: 139px;
@@ -200,7 +204,9 @@ main {
             .background{
                 position: relative;
                 width: 95.5vw;
-                height: 863px;
+                max-width: 1834px;
+                height: 45vw;
+                max-height: 863px;
                 background-color: $yellow;
                 border-radius: 30px;
                 display: flex;
@@ -211,14 +217,21 @@ main {
 
                     }
                     &:nth-child(2){
+                        width: max-content;
+                        max-width: 928px;
+                        height: max-content;
                         margin-right: 6.9vw;
                         margin-left: 3.9vw;
                         border-radius: 50px;
                         position: relative;
                         img{
-                            position: absolute;
-                            top: 0;
-                            right: 0;
+                            width: 48.3vw;
+                        }
+                        a{
+                            
+                            span{
+                                
+                            }
                         }
                     }
                 }

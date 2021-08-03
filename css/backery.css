@@ -58,6 +58,7 @@ main .firstSection {
 
 main .firstSection .powder {
   width: 56.5vw;
+  max-width: 1084px;
   position: absolute;
   right: 0;
   top: 0;
@@ -102,6 +103,7 @@ main .firstSection .container span::after {
 main .firstSection .container .logo {
   margin-top: 74px;
   width: 9.6vw;
+  max-width: 184px;
 }
 
 main .firstSection .container .interduce {
@@ -130,6 +132,7 @@ main .firstSection .container .interduce .context {
 
 main .firstSection .container .interduce .context img {
   width: 36vw;
+  max-width: 692px;
   position: absolute;
   left: 0;
   top: 0;
@@ -138,6 +141,7 @@ main .firstSection .container .interduce .context img {
 
 main .firstSection .container .interduce .context .textBackground {
   width: 44.3vw;
+  max-width: 850px;
   height: 490px;
   position: absolute;
   top: 139px;
@@ -245,7 +249,9 @@ main .secondSection h1 {
 main .secondSection .container .background {
   position: relative;
   width: 95.5vw;
-  height: 863px;
+  max-width: 1834px;
+  height: 45vw;
+  max-height: 863px;
   background-color: #FFF6E1;
   border-radius: 30px;
   display: -webkit-box;
@@ -260,6 +266,13 @@ main .secondSection .container .background {
 }
 
 main .secondSection .container .background div:nth-child(2) {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  max-width: 928px;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
   margin-right: 6.9vw;
   margin-left: 3.9vw;
   border-radius: 50px;
@@ -267,8 +280,6 @@ main .secondSection .container .background div:nth-child(2) {
 }
 
 main .secondSection .container .background div:nth-child(2) img {
-  position: absolute;
-  top: 0;
-  right: 0;
+  width: 48.3vw;
 }
 /*# sourceMappingURL=backery.css.map */
