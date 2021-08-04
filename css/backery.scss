@@ -376,4 +376,27 @@ main {
             }
         }
     }
+    .thirdSection{
+        margin-top: 65px;
+        .container{
+            position: relative;
+            h1{
+                text-align: center;
+            }
+            ul{
+                position: absolute;
+                left: 47px;
+                background-color: $orange;
+                padding: 37px 80px;
+                a{
+                    background-color: $yellow;
+                    li{
+                        font-size: 36px;
+                        color: $brownLight;
+                        font-weight: bolder;
+                    }
+                }
+            }
+        }
+    }
 }

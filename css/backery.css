@@ -484,4 +484,33 @@ main .secondSection-group .secondSection-swiper .mySwiper .swiper-wrapper .swipe
   margin-right: 14px;
   color: #603210;
 }
+
+main .thirdSection {
+  margin-top: 65px;
+}
+
+main .thirdSection .container {
+  position: relative;
+}
+
+main .thirdSection .container h1 {
+  text-align: center;
+}
+
+main .thirdSection .container ul {
+  position: absolute;
+  left: 47px;
+  background-color: #feb768;
+  padding: 37px 80px;
+}
+
+main .thirdSection .container ul a {
+  background-color: #fff6e1;
+}
+
+main .thirdSection .container ul a li {
+  font-size: 36px;
+  color: #823d08;
+  font-weight: bolder;
+}
 /*# sourceMappingURL=backery.css.map */
