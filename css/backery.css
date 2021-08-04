@@ -237,6 +237,7 @@ main .firstSection .container .interduce .context:nth-child(5) h5 {
 }
 
 main .secondSection-group .secondSection {
+  margin-top: 6%;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -244,7 +245,6 @@ main .secondSection-group .secondSection {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 100vh;
 }
 
 main .secondSection-group .secondSection h1 {
