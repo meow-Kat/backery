@@ -9,6 +9,7 @@ p {
 
 h1 {
   font-size: 64px;
+  color: #564d4d;
 }
 
 h2 {
@@ -25,6 +26,10 @@ h4 {
 
 h5 {
   font-size: 22px;
+}
+
+h6 {
+  font-size: 20px;
 }
 
 body {
@@ -121,6 +126,7 @@ main .firstSection .container .logo {
 main .firstSection .container .interduce {
   width: 100%;
   max-width: 1920px;
+  color: #000;
 }
 
 main .firstSection .container .interduce h1 {
@@ -129,10 +135,10 @@ main .firstSection .container .interduce h1 {
 }
 
 main .firstSection .container .interduce h1:nth-child(2) {
-  color: #564d4d;
   margin-top: 17.3%;
   margin-left: unset;
   text-align: center;
+  color: #564d4d;
 }
 
 main .firstSection .container .interduce .context {
@@ -237,7 +243,7 @@ main .firstSection .container .interduce .context:nth-child(5) h5 {
 }
 
 main .secondSection-group .secondSection {
-  margin-top: 6%;
+  margin: 6% 0;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -264,7 +270,7 @@ main .secondSection-group .secondSection .container .background {
   max-width: 1834px;
   height: 45vw;
   max-height: 863px;
-  background-color: #FFF6E1;
+  background-color: #fff6e1;
   border-radius: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -371,10 +377,11 @@ main .secondSection-group .secondSection .container .background div:nth-child(2)
       -ms-flex-align: center;
           align-items: center;
   background-color: #823d08;
+  border: 2px solid #823d08;
 }
 
 main .secondSection-group .secondSection .container .background div:nth-child(2) .hashTag a span {
-  color: #FFF;
+  color: #fff;
   font-size: 12px;
 }
 
@@ -382,7 +389,99 @@ main .secondSection-group .secondSection .container .background div:nth-child(2)
   margin-left: unset;
 }
 
+main .secondSection-group .secondSection .container .background div:nth-child(2) .hashTag a:hover {
+  background-color: #fff;
+}
+
+main .secondSection-group .secondSection .container .background div:nth-child(2) .hashTag a:hover span {
+  color: #823d08;
+}
+
 main .secondSection-group .secondSection-swiper {
-  margin: 111px 0;
+  margin-bottom: 111px;
+}
+
+main .secondSection-group .secondSection-swiper .mySwiper .swiper-wrapper .swiper-slide {
+  width: auto !important;
+  background-color: #fff6e1;
+}
+
+main .secondSection-group .secondSection-swiper .mySwiper .swiper-wrapper .swiper-slide .photo {
+  position: relative;
+}
+
+main .secondSection-group .secondSection-swiper .mySwiper .swiper-wrapper .swiper-slide .photo .hashTag {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .secondSection-group .secondSection-swiper .mySwiper .swiper-wrapper .swiper-slide .photo .hashTag a {
+  width: 76px;
+  height: 27px;
+  margin-left: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #823d08;
+  border: 2px solid #823d08;
+}
+
+main .secondSection-group .secondSection-swiper .mySwiper .swiper-wrapper .swiper-slide .photo .hashTag a span {
+  color: #fff;
+  font-size: 12px;
+}
+
+main .secondSection-group .secondSection-swiper .mySwiper .swiper-wrapper .swiper-slide .photo .hashTag a:nth-child(1) {
+  margin-left: unset;
+}
+
+main .secondSection-group .secondSection-swiper .mySwiper .swiper-wrapper .swiper-slide .photo .hashTag a:hover {
+  background-color: #fff;
+}
+
+main .secondSection-group .secondSection-swiper .mySwiper .swiper-wrapper .swiper-slide .photo .hashTag a:hover span {
+  color: #823d08;
+}
+
+main .secondSection-group .secondSection-swiper .mySwiper .swiper-wrapper .swiper-slide .text {
+  padding: 24px 20px;
+}
+
+main .secondSection-group .secondSection-swiper .mySwiper .swiper-wrapper .swiper-slide .text h6 {
+  margin-bottom: 10px;
+}
+
+main .secondSection-group .secondSection-swiper .mySwiper .swiper-wrapper .swiper-slide .text span {
+  font-size: 14px;
+}
+
+main .secondSection-group .secondSection-swiper .mySwiper .swiper-wrapper .swiper-slide .text p {
+  width: 548px;
+  margin: 10px 0 20px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+main .secondSection-group .secondSection-swiper .mySwiper .swiper-wrapper .swiper-slide .text a {
+  margin-left: calc(100% - 134px);
+}
+
+main .secondSection-group .secondSection-swiper .mySwiper .swiper-wrapper .swiper-slide .text a span {
+  font-size: 16px;
+  font-weight: bold;
+  margin-right: 14px;
+  color: #603210;
 }
 /*# sourceMappingURL=backery.css.map */
