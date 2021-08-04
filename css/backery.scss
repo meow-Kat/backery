@@ -382,10 +382,12 @@ main {
             position: relative;
             h1{
                 text-align: center;
+                margin-bottom: 48px;
             }
             ul{
                 position: absolute;
-                left: 47px;
+                top: 0;
+                left: 90px;
                 background-color: $orange;
                 padding: 37px 80px;
                 a{
@@ -396,6 +398,13 @@ main {
                         font-weight: bolder;
                     }
                 }
+            }
+            .background{
+                width: 1834px;
+                height: 754px;
+                border-radius: 30px;
+                border: 5px solid $orange;
+                background-color: #fff;
             }
         }
     }

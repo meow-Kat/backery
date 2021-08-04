@@ -495,11 +495,13 @@ main .thirdSection .container {
 
 main .thirdSection .container h1 {
   text-align: center;
+  margin-bottom: 48px;
 }
 
 main .thirdSection .container ul {
   position: absolute;
-  left: 47px;
+  top: 0;
+  left: 90px;
   background-color: #feb768;
   padding: 37px 80px;
 }
@@ -512,5 +514,13 @@ main .thirdSection .container ul a li {
   font-size: 36px;
   color: #823d08;
   font-weight: bolder;
+}
+
+main .thirdSection .container .background {
+  width: 1834px;
+  height: 754px;
+  border-radius: 30px;
+  border: 5px solid #feb768;
+  background-color: #fff;
 }
 /*# sourceMappingURL=backery.css.map */
