@@ -306,21 +306,29 @@
             <div class="container">
                 <h1>麵包◌埠</h1>
                 <ul>
-                    <a href="">
-                        <li>- 全部</li>
-                    </a>
-                    <a href="">
-                        <li>- 禮盒</li>
-                    </a>
-                    <a href="">
-                        <li>- 限定</li>
-                    </a>
-                    <a href="">
-                        <li>- 熱銷</li>
-                    </a>
+                    <li><a href=""><span>- 全部</span></a></li>
+                    <li><a href=""><span>- 禮盒</span></a></li>
+                    <li><a href=""><span>- 限定</span></a></li>
+                    <li><a href=""><span>- 熱銷</span></a></li>
                 </ul>
                 <div class="background">
-                    
+                    <div class="swiper-container cardSwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="testimonialBox">
+                                    <img src="/img/3rd-img1.png" alt="">
+                                    <div class="text">
+                                        <span>熱銷</span>
+                                        <h6>經典可頌</h6>
+                                        <span>丹麥LURPAK奶油</span>
+                                        <h6>$ 48</h6>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
                 </div>
             </div>
     </main>
@@ -334,6 +342,22 @@
             pagination: {
                 el: ".swiper-pagination",
                 clickable: true,
+            },
+        });
+        var swiper = new Swiper(".cardSwiper", {
+            effect: "coverflow",
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: "auto",
+            coverflowEffect: {
+                rotate: 50,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows: true,
+            },
+            pagination: {
+                el: ".cardSwiper .swiper-pagination",
             },
         });
     </script>

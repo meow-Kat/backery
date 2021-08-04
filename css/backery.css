@@ -506,21 +506,67 @@ main .thirdSection .container ul {
   padding: 37px 80px;
 }
 
-main .thirdSection .container ul a {
+main .thirdSection .container ul li {
   background-color: #fff6e1;
 }
 
-main .thirdSection .container ul a li {
+main .thirdSection .container ul li a span {
   font-size: 36px;
   color: #823d08;
   font-weight: bolder;
 }
 
 main .thirdSection .container .background {
-  width: 1834px;
-  height: 754px;
+  width: 95.5vw;
+  max-width: 1834px;
+  height: 39.3vw;
+  max-height: 754px;
   border-radius: 30px;
   border: 5px solid #feb768;
   background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .thirdSection .container .background .cardSwiper .swiper-wrapper .swiper-slide {
+  width: auto !important;
+  border-radius: 5px 5px 0 0;
+  background-color: #fff6e1;
+}
+
+main .thirdSection .container .background .cardSwiper .swiper-wrapper .swiper-slide .testimonialBox img {
+  width: 26vw;
+  border-radius: 5px;
+}
+
+main .thirdSection .container .background .cardSwiper .swiper-wrapper .swiper-slide .testimonialBox .text {
+  margin: 16px 0;
+}
+
+main .thirdSection .container .background .cardSwiper .swiper-wrapper .swiper-slide .testimonialBox .text span {
+  display: block;
+  margin-top: 10px;
+  color: #823d08;
+  font-weight: bold;
+}
+
+main .thirdSection .container .background .cardSwiper .swiper-wrapper .swiper-slide .testimonialBox .text span:nth-child(1) {
+  margin-top: unset;
+  color: #603210;
+}
+
+main .thirdSection .container .background .cardSwiper .swiper-wrapper .swiper-slide .testimonialBox .text h6 {
+  margin-top: 10px;
+}
+
+main .thirdSection .container .background .cardSwiper .swiper-wrapper .swiper-slide .testimonialBox .text h6:nth-child(1) {
+  margin-bottom: 10px;
 }
 /*# sourceMappingURL=backery.css.map */
