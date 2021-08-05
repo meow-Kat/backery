@@ -266,7 +266,7 @@ main .secondSection-group .secondSection h1 {
 
 main .secondSection-group .secondSection .container .background {
   position: relative;
-  width: 95.5vw;
+  width: 100%;
   max-width: 1834px;
   height: 45vw;
   max-height: 863px;
@@ -499,27 +499,36 @@ main .thirdSection .container h1 {
   margin-bottom: 48px;
 }
 
-main .thirdSection .container ul {
-  position: absolute;
-  top: 0;
-  left: 90px;
+main .thirdSection .container .select {
   background-color: #feb768;
-  padding: 37px 80px;
+  position: relative;
+}
+
+main .thirdSection .container .select span {
+  padding: 36px 4%;
+  background-color: #feb768;
+  border-radius: 30px 30px 0 0;
+  position: absolute;
+  top: -117px;
+  left: 90px;
+  font-size: 36px;
+  font-weight: bold;
+  color: #823d08;
   z-index: 2;
 }
 
-main .thirdSection .container ul li {
+main .thirdSection .container .select ul li {
   background-color: #fff6e1;
 }
 
-main .thirdSection .container ul li a span {
+main .thirdSection .container .select ul li a span {
   font-size: 36px;
   color: #823d08;
   font-weight: bolder;
 }
 
 main .thirdSection .container .background {
-  width: 95.5vw;
+  width: 100%;
   max-width: 1834px;
   height: 50vw;
   max-height: 754px;
@@ -643,11 +652,16 @@ main .fourthSection .container .img-group img:nth-child(6) {
           transform: translateX(-50%);
 }
 
-main .fifthSection {
-  padding: 219px 0;
+main .fifthSection .container span {
+  padding: 60px 40px;
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  font-size: 216px;
+  color: #603210;
 }
 
-main .fifthSection div {
+main .fifthSection .container div {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -655,5 +669,6 @@ main .fifthSection div {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  z-index: 2;
 }
 /*# sourceMappingURL=backery.css.map */
