@@ -399,7 +399,27 @@
             },
         });
     </script>
+    <!-- drop down -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function (e) {
+            $('.custom-select').click(function (e) {
+                e.stopPropagation();
+                $('.select-options', this).slideToggle();
+            });
 
+            $('.select-options li').click(function (e) {
+                e.stopPropagation();
+                const text_inside = $(this).text();
+                $(this).parent().slideUp();
+                $(this).parent().prev().text(text_inside);
+            });
+
+            $(document).click(function (e) {
+                $('.select-options').slideUp();
+            });
+        });
+    </script>
 </body>
 
 </html>
