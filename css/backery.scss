@@ -404,7 +404,7 @@ main {
             .background {
                 width: 95.5vw;
                 max-width: 1834px;
-                height: 39.3vw;
+                height: 50vw;
                 max-height: 754px;
                 border-radius: 30px;
                 border: 5px solid $orange;
@@ -412,17 +412,23 @@ main {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                .cardSwiper .swiper-wrapper .swiper-slide {
-                    width: auto !important;
-                    border-radius: 5px 5px 0 0;
-                    background-color: $yellow;
-                    .testimonialBox {
+                .cardSwiper .swiper-wrapper{
+                    .swiper-slide {
+                        width: auto !important;
+                        border-radius: 5px 5px 0 0;
+                        background-color: $yellow;
+                        filter: blur(4px);
+                        box-shadow: 0 15px 50px rgba(0, 0, 0, 0.25);
+                        .swiper-slide-shadow-left,
+                        .swiper-slide-shadow-right {
+                            background-image: none;
+                        }
                         img {
                             width: 26vw;
                             border-radius: 5px;
                         }
                         .text {
-                            margin: 16px 0;
+                            margin: 16px 24px;
                             span {
                                 display: block;
                                 margin-top: 10px;
@@ -441,7 +447,10 @@ main {
                             }
                         }
                     }
-                }
+                    .swiper-slide-active {
+                        filter: unset;
+                    }
+                } 
             }
         }
     }

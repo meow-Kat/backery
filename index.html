@@ -315,19 +315,24 @@
                     <div class="swiper-container cardSwiper">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
-                                <div class="testimonialBox">
-                                    <img src="/img/3rd-img1.png" alt="">
-                                    <div class="text">
-                                        <span>熱銷</span>
-                                        <h6>經典可頌</h6>
-                                        <span>丹麥LURPAK奶油</span>
-                                        <h6>$ 48</h6>
-                                    </div>
+                                <img src="/img/3rd-img1.png" alt="">
+                                <div class="text">
+                                    <span>熱銷</span>
+                                    <h6>經典可頌</h6>
+                                    <span>丹麥LURPAK奶油</span>
+                                    <h6>$ 48</h6>
                                 </div>
                             </div>
-
+                            <div class="swiper-slide">
+                                <img src="/img/3rd-img1.png" alt="">
+                                <div class="text">
+                                    <span>熱銷</span>
+                                    <h6>經典可頌</h6>
+                                    <span>丹麥LURPAK奶油</span>
+                                    <h6>$ 48</h6>
+                                </div>
+                            </div>
                         </div>
-                        <div class="swiper-pagination"></div>
                     </div>
                 </div>
             </div>
@@ -349,15 +354,13 @@
             grabCursor: true,
             centeredSlides: true,
             slidesPerView: "auto",
+            loop: true,
             coverflowEffect: {
-                rotate: 50,
+                rotate: 0,
                 stretch: 0,
                 depth: 100,
-                modifier: 1,
+                modifier: 2,
                 slideShadows: true,
-            },
-            pagination: {
-                el: ".cardSwiper .swiper-pagination",
             },
         });
     </script>
