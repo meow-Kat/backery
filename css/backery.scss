@@ -385,35 +385,75 @@ main {
                 text-align: center;
                 margin-bottom: 48px;
             }
-            .select {
-                background-color: $orange;
-                position: relative; 
-                span {
-                    padding: 36px 4%;
-                    background-color: $orange;
-                    border-radius: 30px 30px 0 0;
-                    position: absolute;
-                    top: -117px;
-                    left: 90px;
-                    font-size: 36px;
-                    font-weight: bold;
-                    color: $brownLight;
-                    z-index: 2;
-                }
-                ul {
-                    li {
-                        background-color: $yellow;
-                        a {
-                            span {
-                                font-size: 36px;
-                                color: $brownLight;
-                                font-weight: bolder;
-                            }
+
+            ul {
+                li {
+                    background-color: $yellow;
+                    a {
+                        span {
+                            font-size: 36px;
+                            color: $brownLight;
+                            font-weight: bolder;
                         }
                     }
                 }
             }
-            
+
+            /* Custom Select */
+            .select {
+                position: relative;
+                display: flex;
+                width: 20em;
+                height: 3em;
+                line-height: 3;
+                background: #2c3e50;
+                overflow: hidden;
+                border-radius: 0.25em;
+
+                select {
+                    // 初始化
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    -ms-appearance: none;
+                    appearance: none;
+                    outline: 0;
+                    box-shadow: none;
+                    border: 0 !important;
+                    background: #2c3e50;
+                    background-image: none;
+
+                    /* Remove IE arrow */
+                    &::-ms-expand {
+                        display: none;
+                    }
+
+                    flex: 1;
+                    padding: 0 0.5em;
+                    color: #fff;
+                    cursor: pointer;
+                }
+
+                /* Arrow */
+                &::after {
+                    content: "\25BC";
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    padding: 0 1em;
+                    background: #34495e;
+                    cursor: pointer;
+                    pointer-events: none;
+                    -webkit-transition: 0.25s all ease;
+                    -o-transition: 0.25s all ease;
+                    transition: 0.25s all ease;
+                }
+
+                /* Transition */
+                &:hover::after {
+                    color: #f39c12;
+                }
+            }
+
             .background {
                 width: 100%;
                 max-width: 1834px;
@@ -517,7 +557,7 @@ main {
     }
     .fifthSection {
         .container {
-            span{
+            span {
                 padding: 60px 40px;
                 display: block;
                 text-align: center;

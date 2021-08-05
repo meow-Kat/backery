@@ -305,24 +305,21 @@
         <div class="thirdSection">
             <div class="container">
                 <h1>麵包 ◌ 埠</h1>
+                <ul>
+                    <li><a href="">全部</a></li>
+                    <li><a href="">經典</a></li>
+                    <li><a href="">禮盒</a></li>
+                    <li><a href="">限定</a></li>
+                </ul>
+
                 <div class="select">
-                    <label></label>
-                    <span class="option-selected">- 全部</span>
-                    <ul class="select-options" style="display: none;">
-                        <a href="">
-                            <li>- 全部</li>
-                        </a>
-                        <a href="">
-                            <li>- 禮盒</li>
-                        </a>
-                        <a href="">
-                            <li>- 限定</li>
-                        </a>
-                        <a href="">
-                            <li>- 熱銷</li>
-                        </a>
-                    </ul>
-                </div>
+                    <select name="slct" id="slct">
+                      <option selected disabled>Choose an option</option>
+                      <option value="1">Pure CSS</option>
+                      <option value="2">No JS</option>
+                      <option value="3">Nice!</option>
+                    </select>
+                  </div>
 
                 <div class="background">
                     <div class="swiper-container cardSwiper">
@@ -330,7 +327,7 @@
                             <div class="swiper-slide">
                                 <img src="/img/3rd-img1.png" alt="">
                                 <div class="text">
-                                    <span>熱銷</span>
+                                    <span>經典</span>
                                     <h6>經典可頌</h6>
                                     <span>丹麥LURPAK奶油</span>
                                     <h6>$ 48</h6>
@@ -386,6 +383,41 @@
         </div>
 
     </main>
+    <!-- drop down -->
+    <script>
+        $(document).ready(function () {
+            $(".drop .option").click(function () {
+                var val = $(this).attr("data-value"),
+                    $drop = $(".drop"),
+                    prevActive = $(".drop .option.active").attr("data-value"),
+                    options = $(".drop .option").length;
+                $drop.find(".option.active").addClass("mini-hack");
+                $drop.toggleClass("visible");
+                $drop.removeClass("withBG");
+                $(this).css("top");
+                $drop.toggleClass("opacity");
+                $(".mini-hack").removeClass("mini-hack");
+                if ($drop.hasClass("visible")) {
+                    setTimeout(function () {
+                        $drop.addClass("withBG");
+                    }, 400 + options * 100);
+                }
+                triggerAnimation();
+                if (val !== "placeholder" || prevActive === "placeholder") {
+                    $(".drop .option").removeClass("active");
+                    $(this).addClass("active");
+                };
+            });
+
+            function triggerAnimation() {
+                var finalWidth = $(".drop").hasClass("visible") ? 22 : 20;
+                $(".drop").css("width", "24em");
+                setTimeout(function () {
+                    $(".drop").css("width", finalWidth + "em");
+                }, 400);
+            }
+        });
+    </script>
     <!-- swiperJS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
@@ -413,7 +445,7 @@
             },
         });
     </script>
-    
+
 </body>
 
 </html>
