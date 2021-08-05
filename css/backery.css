@@ -515,14 +515,6 @@ main .thirdSection .container .select {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 20em;
-  height: 3em;
-  line-height: 3;
-  background: #2c3e50;
-  overflow: hidden;
-  border-radius: 0.25em;
-  /* Arrow */
-  /* Transition */
 }
 
 main .thirdSection .container .select select {
@@ -534,36 +526,20 @@ main .thirdSection .container .select select {
   -webkit-box-shadow: none;
           box-shadow: none;
   border: 0 !important;
-  background: #2c3e50;
+  background-color: #feb768;
   background-image: none;
   /* Remove IE arrow */
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  padding: 0 0.5em;
   color: #fff;
   cursor: pointer;
+  text-align: center;
+  border-radius: 30px 30px 0 0;
+  padding: 36px 80px;
+  font-size: 36px;
+  font-weight: bold;
 }
 
 main .thirdSection .container .select select::-ms-expand {
   display: none;
-}
-
-main .thirdSection .container .select::after {
-  content: "\25BC";
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 0 1em;
-  background: #34495e;
-  cursor: pointer;
-  pointer-events: none;
-  -webkit-transition: 0.25s all ease;
-  transition: 0.25s all ease;
-}
-
-main .thirdSection .container .select:hover::after {
-  color: #f39c12;
 }
 
 main .thirdSection .container .background {
@@ -583,6 +559,10 @@ main .thirdSection .container .background {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+main .thirdSection .container .background .cardSwiper {
+  padding: 4% 0;
 }
 
 main .thirdSection .container .background .cardSwiper .swiper-wrapper .swiper-slide {
