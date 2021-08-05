@@ -378,6 +378,7 @@ main {
     }
     .thirdSection {
         margin-top: 65px;
+        margin-bottom: 138px;
         .container {
             position: relative;
             h1 {
@@ -390,6 +391,7 @@ main {
                 left: 90px;
                 background-color: $orange;
                 padding: 37px 80px;
+                z-index: 2;
                 li {
                     background-color: $yellow;
                     a {
@@ -412,7 +414,7 @@ main {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                .cardSwiper .swiper-wrapper{
+                .cardSwiper .swiper-wrapper {
                     .swiper-slide {
                         width: auto !important;
                         border-radius: 5px 5px 0 0;
@@ -450,8 +452,64 @@ main {
                     .swiper-slide-active {
                         filter: unset;
                     }
-                } 
+                }
             }
+        }
+    }
+    .fourthSection {
+        margin-top: 108px;
+        margin-bottom: 72px;
+        .container {
+            h1 {
+                text-align: right;
+                margin-right: 6.9vw;
+                margin-bottom: 50px;
+            }
+            .img-group {
+                position: relative;
+                height: 152.6vw;
+                img {
+                    position: absolute;
+                    &:nth-child(1) {
+                        width: 47vw;
+                        right: 6.9vw;
+                    }
+                    &:nth-child(2) {
+                        width: 36vw;
+                        top: 19vw;
+                        left: 4vw;
+                    }
+                    &:nth-child(3) {
+                        width: 45.4vw;
+                        top: 47.7vw;
+                        right: 6.9vw;
+                    }
+                    &:nth-child(4) {
+                        width: 33vw;
+                        top: 78vw;
+                        left: 5.5vw;
+                    }
+                    &:nth-child(5) {
+                        width: 28.5vw;
+                        top: 89.7vw;
+                        right: 2.2vw;
+                    }
+                    &:nth-child(6) {
+                        width: 57.9vw;
+                        top: 114vw;
+                        left: 50%;
+                        transform: translateX(-50%);
+                    }
+                }
+            }
+        }
+    }
+    .fifthSection {
+        padding: 219px 0;
+        div {
+            width: 100%;
+            display: flex;
+            justify-content: center;
         }
     }
 }
