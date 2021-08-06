@@ -305,21 +305,50 @@
         <div class="thirdSection">
             <div class="container">
                 <h1>麵包 ◌ 埠</h1>
-                <ul>
+                <!-- <ul>
                     <li><a href="">全部</a></li>
                     <li><a href="">經典</a></li>
                     <li><a href="">禮盒</a></li>
                     <li><a href="">限定</a></li>
-                </ul>
+                </ul> -->
 
-                <div class="select">
-                    <select name="slct" id="slct">
-                      <option selected disabled>- 全部</option>
-                      <option value="1">Pure CSS</option>
-                      <option value="2">No JS</option>
-                      <option value="3">Nice!</option>
-                    </select>
-                  </div>
+                <div class="dropDown">
+                    <ul class="select">
+                        <li>
+                            <input class="select_close" type="radio" name="awesomeness" id="awesomeness-close" value=""/>
+                            <span class="select_label select_label-placeholder">Awesomeness Level</span>
+                        </li>
+                        
+                        <li class="select_items">
+                            <input class="select_expand" type="radio" name="awesomeness" id="awesomeness-opener"/>
+                            <label class="select_closeLabel" for="awesomeness-close"></label>
+                            
+                            <ul class="select_options">
+                                <li class="select_option">
+                                    <input class="select_input" type="radio" name="awesomeness" id="awesomeness-ridiculous"/>
+                                    <label class="select_label" for="awesomeness-ridiculous">ridiculous</label>
+                                </li>
+                
+                                <li class="select_option">
+                                    <input class="select_input" type="radio" name="awesomeness" id="awesomeness-reasonable"/>
+                                    <label class="select_label" for="awesomeness-reasonable">reasonable</label>
+                                </li>
+                
+                                <li class="select_option">
+                                    <input class="select_input" type="radio" name="awesomeness" id="awesomeness-lacking"/>
+                                    <label class="select_label" for="awesomeness-lacking">lacking</label>
+                                </li>
+                
+                                <li class="select_option">
+                                    <input class="select_input" type="radio" name="awesomeness" id="awesomeness-awesomeless"/>
+                                    <label class="select_label" for="awesomeness-awesomeless">awesomeless</label>
+                                </li>
+                            </ul>
+                            
+                            <label class="select_expandLabel" for="awesomeness-opener"></label>
+                        </li>
+                    </ul>
+                </div>
 
                 <div class="background">
                     <div class="swiper-container cardSwiper">
@@ -385,38 +414,7 @@
     </main>
     <!-- drop down -->
     <script>
-        $(document).ready(function () {
-            $(".drop .option").click(function () {
-                var val = $(this).attr("data-value"),
-                    $drop = $(".drop"),
-                    prevActive = $(".drop .option.active").attr("data-value"),
-                    options = $(".drop .option").length;
-                $drop.find(".option.active").addClass("mini-hack");
-                $drop.toggleClass("visible");
-                $drop.removeClass("withBG");
-                $(this).css("top");
-                $drop.toggleClass("opacity");
-                $(".mini-hack").removeClass("mini-hack");
-                if ($drop.hasClass("visible")) {
-                    setTimeout(function () {
-                        $drop.addClass("withBG");
-                    }, 400 + options * 100);
-                }
-                triggerAnimation();
-                if (val !== "placeholder" || prevActive === "placeholder") {
-                    $(".drop .option").removeClass("active");
-                    $(this).addClass("active");
-                };
-            });
 
-            function triggerAnimation() {
-                var finalWidth = $(".drop").hasClass("visible") ? 22 : 20;
-                $(".drop").css("width", "24em");
-                setTimeout(function () {
-                    $(".drop").css("width", finalWidth + "em");
-                }, 400);
-            }
-        });
     </script>
     <!-- swiperJS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>

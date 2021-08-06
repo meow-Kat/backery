@@ -21,6 +21,19 @@ a {
     text-decoration: none;
 }
 
-ul,ol {
+ul,
+ol {
     list-style: none;
+}
+
+select {
+    appearance: none;
+    outline: 0;
+    box-shadow: none;
+    border: 0 !important;
+    background-image: none;
+}
+/* Remove IE arrow */
+select::-ms-expand {
+    display: none;
 }
