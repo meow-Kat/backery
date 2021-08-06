@@ -499,20 +499,33 @@ main .thirdSection .container h1 {
   margin-bottom: 48px;
 }
 
-main .thirdSection .container ul li {
-  background-color: #fff6e1;
+main .thirdSection .container .dropdown {
+  position: absolute;
+  top: 12px;
 }
 
-main .thirdSection .container ul li a span {
+main .thirdSection .container .dropdown .select {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  margin-left: 47px;
+  width: 256px;
+  height: 100%;
+  border-bottom: 0px;
+  border-radius: 30px 30px 0 0;
   font-size: 36px;
-  color: #823d08;
   font-weight: bolder;
 }
 
-main .thirdSection .container .dropDown {
-  width: 100%;
-  height: 100%;
-  padding-bottom: 75px;
+main .thirdSection .container .dropdown .select > i.toggle {
+  position: absolute;
+  z-index: 4;
+  color: #823d08;
+}
+
+main .thirdSection .container .dropdown .select .title,
+main .thirdSection .container .dropdown .select .placeholder {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -522,132 +535,105 @@ main .thirdSection .container .dropDown {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-image: radial-gradient(at top, #b5e6cf, #9dddad);
-}
-
-main .thirdSection .container .dropDown .select {
-  width: 225px;
-  height: 40px;
-  cursor: pointer;
-  background-color: white;
-  -webkit-box-shadow: 0 2px 0 white;
-          box-shadow: 0 2px 0 white;
-  border-radius: 2px;
-}
-
-main .thirdSection .container .dropDown .select_expand {
-  width: 0;
-  height: 40px;
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-
-main .thirdSection .container .dropDown .select_expand::after {
-  content: "\003E";
-  position: absolute;
-  top: 50%;
-  right: 0;
-  -webkit-transform: translate(-50%, -50%) rotate(90deg) scaleY(1.75);
-          transform: translate(-50%, -50%) rotate(90deg) scaleY(1.75);
-  color: #3e3e3e;
-  font-size: 28px;
-  pointer-events: none;
-  z-index: 2;
-  -webkit-transition: all 250ms cubic-bezier(0.4, 0.25, 0.3, 1);
-  transition: all 250ms cubic-bezier(0.4, 0.25, 0.3, 1);
-  opacity: 0.6;
-}
-
-main .thirdSection .container .dropDown .select_expand:hover::after {
-  opacity: 1;
-}
-
-main .thirdSection .container .dropDown .select_expand:checked::after {
-  -webkit-transform: translate(-50%, -50%) rotate(90deg) scaleX(-1) scaleY(1.75);
-          transform: translate(-50%, -50%) rotate(90deg) scaleX(-1) scaleY(1.75);
-}
-
-main .thirdSection .container .dropDown .select_expandLabel {
-  display: block;
   width: 100%;
-  height: 40px;
+  height: 100%;
+  padding: 37px 81px;
+  background: #feb768;
+  color: #823d08;
+  cursor: pointer;
+  font-size: 36px;
+  font-weight: bolder;
+}
+
+main .thirdSection .container .dropdown .select > input {
   position: absolute;
-  top: 0;
-  left: 0;
+  left: 0px;
+  top: 0px;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  display: block;
+  opacity: 0;
   cursor: pointer;
 }
 
-main .thirdSection .container .dropDown .select_close {
+main .thirdSection .container .dropdown .select > input:checked div.options label.option .title {
+  display: none !important;
+}
+
+main .thirdSection .container .dropdown .select > input:not(:checked) {
+  z-index: 4;
+}
+
+main .thirdSection .container .dropdown .select > input:not(:checked) ~ label.option > span.title {
   display: none;
 }
 
-main .thirdSection .container .dropDown .select_closeLabel {
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  display: none;
+main .thirdSection .container .dropdown .select > input:disabled {
+  cursor: no-drop;
 }
 
-main .thirdSection .container .dropDown .select_items {
+main .thirdSection .container .dropdown .select > span.placeholder {
+  position: relative;
+  z-index: 0;
+  display: inline-block;
   width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  border: 2px solid #2fb5d1;
-  border-radius: 2px;
-  padding-top: 40px;
+  color: #823d08;
+  border-top: 0px;
 }
 
-main .thirdSection .container .dropDown .select_input {
-  display: none;
-}
-
-main .thirdSection .container .dropDown .select_label {
-  -webkit-transition: all 250ms cubic-bezier(0.4, 0.25, 0.3, 1);
-  transition: all 250ms cubic-bezier(0.4, 0.25, 0.3, 1);
+main .thirdSection .container .dropdown .select label.option {
   display: block;
-  height: 0;
-  font-size: 1.2rem;
-  line-height: 40px;
   overflow: hidden;
-  color: #3e3e3e;
-  background-color: #fff;
-  cursor: pointer;
-  padding-left: 20px;
+  z-index: 1;
+  width: 100%;
+  -webkit-transition: all 1s ease-out;
+  transition: all 1s ease-out;
 }
 
-main .thirdSection .container .dropDown .select_label-placeholder {
-  height: 40px;
-  vertical-align: middle;
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0.6;
-  background-color: transparent;
+main .thirdSection .container .dropdown .select label.option span.title {
+  position: relative;
+  z-index: 2;
+  -webkit-transition: background 0.3s ease-out;
+  transition: background 0.3s ease-out;
 }
 
-main .thirdSection .container .dropDown .select_expand:checked + .select_closeLabel {
-  display: block;
+main .thirdSection .container .dropdown .select label.option span.title:hover {
+  color: #823d08;
+  background: #fff6e1;
+  -webkit-box-shadow: inset 0px 1px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: inset 0px 1px 0px rgba(0, 0, 0, 0.1);
 }
 
-main .thirdSection .container .dropDown .select_expand:checked + .select_closeLabel + .select_options .select_label {
-  height: 40px;
-}
-
-main .thirdSection .container .dropDown .select_expand:checked + .select_closeLabel + .select_options .select_label:hover {
-  background-color: #f7f7f7;
-}
-
-main .thirdSection .container .dropDown .select_expand:checked + .select_closeLabel + .select_options + .select_expandLabel {
+main .thirdSection .container .dropdown .select label.option input {
   display: none;
 }
 
-main .thirdSection .container .dropDown .select_input:checked + .select_label {
-  height: 40px;
-  margin-top: -40px;
+main .thirdSection .container .dropdown .select label.option input:checked ~ span.title {
+  position: absolute;
+  display: block;
+  z-index: 3;
+  top: 0px;
+  font-size: 36px;
+  background: #feb768;
+  border-top: 0px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  color: #823d08;
+  width: 100%;
+}
+
+main .thirdSection .container .dropdown .select label.option input:disabled ~ span.title {
+  color: #aaa;
+}
+
+main .thirdSection .container .dropdown .select label.option input:disabled ~ span.title:hover {
+  background: none;
+  cursor: no-drop;
+}
+
+main .thirdSection .container .dropdown .select label.option:nth-last-child(1) span {
+  border-radius: 0 0 10px 10px;
 }
 
 main .thirdSection .container .background {
@@ -784,7 +770,7 @@ main .fifthSection .container span {
   display: block;
   text-align: center;
   font-weight: bold;
-  font-size: 216px;
+  font-size: 10vw;
   color: #603210;
 }
 
