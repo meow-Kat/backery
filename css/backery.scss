@@ -731,6 +731,7 @@ main {
                             margin-bottom: unset;
                         }
                     }
+                    
                 }
                 button{
                     width: 200px;
@@ -740,9 +741,7 @@ main {
                     background-color: #fff;
                     display: block;
                     margin: auto;
-                    span{
-                        padding: 17px 0;
-                    }
+                    padding: 17px 0; 
                 }
             }
         }
