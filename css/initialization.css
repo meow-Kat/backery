@@ -39,12 +39,21 @@ select::-ms-expand {
 }
 
 input {
-    font-size: 18px;
     padding: 10px 10px 10px 5px;
     display: block;
     border: none;
     border-bottom: 1px solid #757575;
 }
-input:focus {
+input[type="file" i] {
+    font-size: 16px;
     outline: none;
+}
+inpuut:focus,textarea:focus {
+    outline: none;
+}
+
+textarea{
+    border: none;
+    border: 1px solid #757575;
+    font-size: 14px;
 }
