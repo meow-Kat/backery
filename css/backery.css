@@ -851,6 +851,10 @@ main .fifthSection .container div .bottom .text {
   color: #603210;
 }
 
+main .sixthSection {
+  margin-bottom: 112px;
+}
+
 main .sixthSection .container h1 {
   margin: 65px 0;
   text-align: center;
@@ -946,5 +950,100 @@ main .sixthSection .container form button {
   display: block;
   margin: auto;
   padding: 17px 0;
+}
+
+footer {
+  padding: 54px 0;
+  background-color: #603210;
+}
+
+footer .container {
+  color: #fff;
+}
+
+footer .container .address {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+}
+
+footer .container .address span {
+  font-size: 1.2vw;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+footer .container .address span:nth-child(1) {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+
+footer .container .address span:nth-child(3) {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+
+footer .container .logo {
+  margin: 134px 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 28px;
+  letter-spacing: 2px;
+}
+
+footer .container .logo img {
+  width: 128px;
+}
+
+footer .container .copyRight {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 6.9vw 1fr 6.9vw;
+      grid-template-columns: 6.9vw 1fr 6.9vw;
+}
+
+footer .container .copyRight .icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+footer .container .copyRight .icons a i {
+  font-size: 3vw;
+}
+
+footer .container .copyRight span {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  font-size: 18px;
+  letter-spacing: 2px;
 }
 /*# sourceMappingURL=backery.css.map */
