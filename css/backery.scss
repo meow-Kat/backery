@@ -621,39 +621,38 @@ main {
         overflow: hidden;
         .container {
             > span {
-            
-                    width: 100%;
-                    display: block;
-                    position: unset;
-                    text-align: center;
-                    font-weight: bold;
-                    font-size: 10vw;
-                    color: $brownDark;
-                    background-color: #fff;
-                    border: 10px solid $brownDark;
-                
+                width: 100%;
+                display: block;
+                position: unset;
+                text-align: center;
+                font-weight: bold;
+                font-size: 10vw;
+                color: $brownDark;
+                background-color: #fff;
+                border: 10px solid $brownDark;
             }
             div {
                 margin: 60px 0;
                 width: 100%;
-                .iframe{
+                .iframe {
                     width: max-content;
                     margin: auto;
                 }
-                .bottom{
+                .bottom {
                     width: 500px;
-                    margin:30px auto 0;
+                    margin: 30px auto 0;
                     display: flex;
                     align-items: center;
                     position: relative;
-                    &::before,&::after{
-                        content: '';
+                    &::before,
+                    &::after {
+                        content: "";
                         position: absolute;
                         right: 500px;
                         width: 750px;
                         border: 1px solid $brownDark;
                     }
-                    &::after{
+                    &::after {
                         right: 0;
                         left: 500px;
                     }
@@ -665,7 +664,7 @@ main {
                         border-radius: 50%;
                         border: 1px solid $brownDark;
                     }
-                    .text{
+                    .text {
                         margin: 0 20px;
                         font-size: 24px;
                         color: $brownDark;
@@ -675,21 +674,21 @@ main {
         }
     }
     .sixthSection {
-        .container{
-            h1{
+        .container {
+            h1 {
                 margin: 65px 0;
                 text-align: center;
             }
-            .containUs{
+            .containUs {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                div{
+                div {
                     width: 29vw;
                     height: 29vw;
                     background-color: $brownLight;
                     position: relative;
-                    span{
+                    span {
                         position: absolute;
                         top: 50%;
                         left: 50%;
@@ -697,43 +696,45 @@ main {
                         font-size: 1.25vw;
                         color: $yellow;
                         font-weight: bold;
-                        &:nth-child(2){
+                        &:nth-child(2) {
                             width: max-content;
                             font-size: 2.5vw;
                             top: unset;
                             bottom: 0;
-                            transform: translate(-50%,0);
+                            transform: translate(-50%, 0);
                         }
                     }
-                    &:nth-child(1){
+                    &:nth-child(1) {
                         margin-bottom: 100px;
                     }
-                    &:nth-child(2){
+                    &:nth-child(2) {
                         background-color: $yellow;
                         margin-top: 100px;
-                        span{
+                        span {
                             color: $brownLight;
                         }
                     }
                 }
             }
-            form{
-                .input-area{
+            form {
+                .input-area {
                     margin: 120px auto 66px;
                     width: 44vw;
                     display: flex;
                     justify-content: center;
                     flex-direction: column;
                     color: $brownLight;
-                    input{
+                    input {
                         margin-bottom: 20px;
-                        &:nth-last-child(1){
-                            margin-bottom: unset;
+                        padding: 10px 10px 10px 5px;
+                        display: block;
+                        border-bottom: 1px solid #757575;
+                        &[type="file" i] {
+                            font-size: 16px;
                         }
                     }
-                    
                 }
-                button{
+                button {
                     width: 200px;
                     border-radius: 46px;
                     color: $brownDark;
@@ -741,7 +742,7 @@ main {
                     background-color: #fff;
                     display: block;
                     margin: auto;
-                    padding: 17px 0; 
+                    padding: 17px 0;
                 }
             }
         }

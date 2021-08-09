@@ -824,7 +824,7 @@ main .fifthSection .container div .bottom {
 }
 
 main .fifthSection .container div .bottom::before, main .fifthSection .container div .bottom::after {
-  content: '';
+  content: "";
   position: absolute;
   right: 500px;
   width: 750px;
@@ -928,10 +928,13 @@ main .sixthSection .container form .input-area {
 
 main .sixthSection .container form .input-area input {
   margin-bottom: 20px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  border-bottom: 1px solid #757575;
 }
 
-main .sixthSection .container form .input-area input:nth-last-child(1) {
-  margin-bottom: unset;
+main .sixthSection .container form .input-area input[type="file" i] {
+  font-size: 16px;
 }
 
 main .sixthSection .container form button {

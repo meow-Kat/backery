@@ -39,13 +39,9 @@ select::-ms-expand {
 }
 
 input {
-    padding: 10px 10px 10px 5px;
-    display: block;
     border: none;
-    border-bottom: 1px solid #757575;
 }
 input[type="file" i] {
-    font-size: 16px;
     outline: none;
 }
 inpuut:focus,textarea:focus {
