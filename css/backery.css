@@ -32,6 +32,11 @@ h6 {
   font-size: 20px;
 }
 
+* {
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+
 body {
   background-image: url(/img/background.png);
 }
@@ -41,12 +46,15 @@ body {
   position: relative;
 }
 
-nav div {
-  width: 6.9vw;
-  height: 6.9vw;
+nav {
   position: fixed;
   right: 43px;
   top: 86px;
+}
+
+nav .menu {
+  width: 6.9vw;
+  height: 6.9vw;
   border: 2px solid #ffd3ce;
   border-radius: 50%;
   display: -webkit-box;
@@ -61,6 +69,10 @@ nav div {
   -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
           filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   z-index: 99;
+}
+
+nav .menu span {
+  position: relative;
 }
 
 main .banner {
@@ -571,8 +583,18 @@ main .thirdSection .container .dropdown .select > input:not(:checked) ~ label.op
   display: none;
 }
 
+main .thirdSection .container .dropdown .select > input:not(:checked):hover ~ label.option input:checked ~ span.title {
+  background-color: #fff6e1;
+  color: #feb768;
+}
+
 main .thirdSection .container .dropdown .select > input:disabled {
   cursor: no-drop;
+}
+
+main .thirdSection .container .dropdown .select > input:hover + .placeholder {
+  background-color: #fff6e1;
+  color: #feb768;
 }
 
 main .thirdSection .container .dropdown .select > span.placeholder {
@@ -601,7 +623,7 @@ main .thirdSection .container .dropdown .select label.option span.title {
 }
 
 main .thirdSection .container .dropdown .select label.option span.title:hover {
-  color: #823d08;
+  color: #feb768;
   background: #fff6e1;
   -webkit-box-shadow: inset 0px 1px 0px rgba(0, 0, 0, 0.1);
           box-shadow: inset 0px 1px 0px rgba(0, 0, 0, 0.1);
@@ -909,6 +931,14 @@ main .sixthSection .container .containUs div:nth-child(1) {
   margin-bottom: 100px;
 }
 
+main .sixthSection .container .containUs div:nth-child(1):hover {
+  background-color: #fff;
+}
+
+main .sixthSection .container .containUs div:nth-child(1):hover span {
+  color: #564d4d;
+}
+
 main .sixthSection .container .containUs div:nth-child(2) {
   background-color: #fff6e1;
   margin-top: 100px;
@@ -916,6 +946,14 @@ main .sixthSection .container .containUs div:nth-child(2) {
 
 main .sixthSection .container .containUs div:nth-child(2) span {
   color: #823d08;
+}
+
+main .sixthSection .container .containUs div:nth-child(2):hover {
+  background-color: #564d4d;
+}
+
+main .sixthSection .container .containUs div:nth-child(2):hover span {
+  color: #fff6e1;
 }
 
 main .sixthSection .container form .input-area {

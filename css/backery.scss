@@ -31,6 +31,9 @@ h5 {
 h6 {
     font-size: 20px;
 }
+* {
+    transition-duration: 0.5s;
+}
 body {
     background-image: url(/img/background.png);
 }
@@ -40,12 +43,12 @@ body {
 }
 
 nav {
-    div {
+    position: fixed;
+    right: 43px;
+    top: 86px;
+    .menu {
         width: 6.9vw;
         height: 6.9vw;
-        position: fixed;
-        right: 43px;
-        top: 86px;
         border: 2px solid $pink;
         border-radius: 50%;
         display: flex;
@@ -53,6 +56,9 @@ nav {
         align-items: center;
         filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
         z-index: 99;
+        span {
+            position: relative; 
+        }
     }
 }
 
@@ -232,7 +238,7 @@ main {
                             height: 31vw;
                             max-height: 595px;
                             .text {
-                                margin-left: 5.6vw; 
+                                margin-left: 5.6vw;
                                 display: flex;
                                 flex-direction: column;
                                 justify-content: flex-end;
@@ -390,6 +396,7 @@ main {
             .dropdown {
                 position: absolute;
                 top: 12px;
+
                 .select {
                     position: relative;
                     overflow: hidden;
@@ -443,9 +450,17 @@ main {
                                     display: none;
                                 }
                             }
+                            &:hover ~ label.option input:checked ~ span.title {
+                                background-color: $yellow;
+                                color: $orange;
+                            }
                         }
                         &:disabled {
                             cursor: no-drop;
+                        }
+                        &:hover + .placeholder {
+                            background-color: $yellow;
+                            color: $orange;
                         }
                     }
                     & > span.placeholder {
@@ -467,7 +482,7 @@ main {
                             z-index: 2;
                             transition: background 0.3s ease-out;
                             &:hover {
-                                color: $brownLight;
+                                color: $orange;
                                 background: $yellow;
                                 box-shadow: inset 0px 1px 0px rgba(0, 0, 0, 0.1);
                             }
@@ -709,12 +724,24 @@ main {
                     }
                     &:nth-child(1) {
                         margin-bottom: 100px;
+                        &:hover {
+                            background-color: #fff;
+                            span {
+                                color: $black;
+                            }
+                        }
                     }
                     &:nth-child(2) {
                         background-color: $yellow;
                         margin-top: 100px;
                         span {
                             color: $brownLight;
+                        }
+                        &:hover {
+                            background-color: $black;
+                            span {
+                                color: $yellow;
+                            }
                         }
                     }
                 }
@@ -753,41 +780,41 @@ main {
     }
 }
 
-footer{
+footer {
     padding: 54px 0;
     background-color: $brownDark;
-    .container{
+    .container {
         color: #fff;
-        .logo{
+        .logo {
             display: flex;
             align-items: center;
             flex-direction: column;
             gap: 28px;
             letter-spacing: 2px;
             margin-bottom: 60px;
-            img{
+            img {
                 width: 128px;
             }
         }
-        .copyRight{
+        .copyRight {
             display: grid;
-            grid-template-columns: 6.9vw 1fr 6.9vw ;
-            .icons{
+            grid-template-columns: 6.9vw 1fr 6.9vw;
+            .icons {
                 display: flex;
                 justify-content: space-between;
-                align-items: flex-end; 
-                a{
-                    i{
+                align-items: flex-end;
+                a {
+                    i {
                         font-size: 3vw;
                     }
                 }
             }
-            .text{
+            .text {
                 display: grid;
                 justify-content: center;
                 align-items: flex-end;
                 font-size: 1.2vw;
-                span{
+                span {
                     display: grid;
                     justify-content: center;
                     letter-spacing: 2px;
@@ -795,7 +822,7 @@ footer{
                 }
             }
         }
-        .backTop{
+        .backTop {
             display: grid;
             justify-content: center;
             align-items: flex-end;
