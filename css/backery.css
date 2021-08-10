@@ -827,6 +827,7 @@ main .fifthSection .container > span {
 }
 
 main .fifthSection .container div {
+  margin: 60px 0;
   width: 100%;
 }
 
