@@ -386,11 +386,11 @@
                 <h1>facebook</h1>
                 <div>
                     <div class="iframe">
-                        <iframe
+                        <!-- <iframe
                             src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fyoshibakery%2F&tabs=timeline&width=500&height=768&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
                             width="500" height="600" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
                             allowfullscreen="true"
-                            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe> -->
                     </div>
                     <div class="bottom">
                         <span class="circle"></span>
@@ -403,16 +403,16 @@
             <div class="container">
                 <h1>聯絡我們</h1>
                 <div class="containUs">
-                    <div>
+                    <div class="contain-us-box" data-x="1">
                         <span>CONTACT US</span>
                         <span>Something To Tell Us</span>
                     </div>
-                    <div>
+                    <div class="join-family-box" data-x="0">
                         <span>JOIN OUR FAMILY</span>
                         <span>Work With Us</span>
                     </div>
                 </div>
-                <form action="">
+                <form  class="form">
                     <div class="input-area">
                         <h4>姓名</h4>
                         <input type="text" name="name" placeholder="Your Name">
@@ -420,8 +420,10 @@
                         <input type="text" name="phone" placeholder="Phone Number">
                         <h4>Email</h4>
                         <input type="text" name="email" placeholder="Email Address">
-                        <h4>履歷附檔</h4>
-                        <input type="file" name="file" placeholder="Phone Number">
+                        <div class="attachment">
+                            <h4>履歷附檔</h4>
+                            <input type="file" name="file" placeholder="Phone Number">
+                        </div>
                         <h4>訊息</h4>
                         <textarea name="" id="" cols="30" rows="10" placeholder="Type Content......"></textarea>
                     </div>
@@ -435,9 +437,6 @@
 
     <footer>
         <div class="container">
-            <div class="address">
-                
-            </div>
             <div class="logo">
                 <span>Supervised by</span>
                 <img src="./img/logo.png" alt="">
@@ -489,9 +488,26 @@
                 modifier: 2,
                 slideShadows: true,
             },
+            
         });
     </script>
-
+    <script>
+        let form = document.querySelector('.form')
+        let contain_us = document.querySelector('.contain-us-box')
+        let join_family = document.querySelector('.join-family-box')
+        let attachment = document.querySelector('.attachment')
+        function active () {
+            let x = this.dataset.x
+            if (x == 1) { 
+                attachment.style.display = 'none'
+            }else{
+                attachment.style.display = 'block'
+            }
+            form.classList.toggle('active')
+        }
+        contain_us.addEventListener('click', active)
+        join_family.addEventListener('click', active)
+    </script>
 </body>
 
 </html>

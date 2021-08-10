@@ -743,6 +743,7 @@ main .thirdSection .container .background .cardSwiper .swiper-wrapper .swiper-sl
           filter: unset;
   -webkit-box-shadow: 0 10px 10px rgba(255, 246, 225, 0.5);
           box-shadow: 0 10px 10px rgba(255, 246, 225, 0.5);
+  cursor: pointer;
 }
 
 main .thirdSection .container .background .cardSwiper .swiper-wrapper .swiper-slide-active .text {
@@ -956,8 +957,13 @@ main .sixthSection .container .containUs div:nth-child(2):hover span {
   color: #fff6e1;
 }
 
+main .sixthSection .container form {
+  height: 0;
+  overflow: hidden;
+}
+
 main .sixthSection .container form .input-area {
-  margin: 120px auto 66px;
+  margin: 66px auto;
   width: 44vw;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -979,7 +985,11 @@ main .sixthSection .container form .input-area input {
   border-bottom: 1px solid #757575;
 }
 
-main .sixthSection .container form .input-area input[type="file" i] {
+main .sixthSection .container form .input-area .attachment input {
+  width: 100%;
+}
+
+main .sixthSection .container form .input-area .attachment input[type="file" i] {
   font-size: 16px;
 }
 
@@ -992,6 +1002,13 @@ main .sixthSection .container form button {
   display: block;
   margin: auto;
   padding: 17px 0;
+  cursor: pointer;
+}
+
+main .sixthSection .container .active {
+  height: 755.2px;
+  -webkit-transition: height, 0.5s linear;
+  transition: height, 0.5s linear;
 }
 
 footer {

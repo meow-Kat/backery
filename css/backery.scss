@@ -577,6 +577,7 @@ main {
                             .text {
                                 display: block;
                             }
+                            cursor: pointer;
                         }
                     }
                 }
@@ -747,9 +748,10 @@ main {
                 }
             }
             form {
-                // margin: -820px;
+                height: 0;
+                overflow: hidden;
                 .input-area {
-                    margin: 120px auto 66px;
+                    margin: 66px auto;
                     width: 44vw;
                     display: flex;
                     justify-content: center;
@@ -760,8 +762,14 @@ main {
                         padding: 10px 10px 10px 5px;
                         display: block;
                         border-bottom: 1px solid #757575;
-                        &[type="file" i] {
-                            font-size: 16px;
+                        
+                    }
+                    .attachment{
+                        input{
+                            width: 100%;
+                            &[type="file" i] {
+                                font-size: 16px;
+                            }
                         }
                     }
                 }
@@ -774,7 +782,12 @@ main {
                     display: block;
                     margin: auto;
                     padding: 17px 0;
+                    cursor: pointer;
                 }
+            }
+            .active {
+                height: 755.2px;
+                transition: height, 0.5s linear;
             }
         }
     }
