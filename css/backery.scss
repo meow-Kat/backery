@@ -213,6 +213,7 @@ main {
                 transform: translateY(-50%);
                 writing-mode: vertical-lr;
                 z-index: 2;
+                height: max-content;
             }
             .container {
                 .background {
@@ -231,13 +232,13 @@ main {
                             height: 31vw;
                             max-height: 595px;
                             .text {
-                                margin-left: 107px;
+                                margin-left: 5.6vw; 
                                 display: flex;
                                 flex-direction: column;
                                 justify-content: flex-end;
                                 .date {
-                                    margin: 80px 0 60px;
-                                    padding-left: 30px;
+                                    margin: 4vw 0 3vw;
+                                    padding-left: 4.5vw;
                                     border-left: 10px solid $pink;
                                     border-radius: unset;
                                     display: flex;
@@ -250,7 +251,7 @@ main {
                                     }
                                 }
                                 a {
-                                    margin-top: 43px;
+                                    margin-top: 2.2vw;
                                     margin-left: auto;
                                     span {
                                         margin-right: 14px;
@@ -689,6 +690,7 @@ main {
                     height: 29vw;
                     background-color: $brownLight;
                     position: relative;
+                    cursor: pointer;
                     span {
                         position: absolute;
                         top: 50%;
@@ -756,30 +758,13 @@ footer{
     background-color: $brownDark;
     .container{
         color: #fff;
-        .address{
-            width: 100%;
-            display: grid;
-            grid-template-columns: repeat(3,1fr) ;
-            span{
-                font-size: 1.2vw;
-                width: 100%;
-                display: grid;
-                justify-content: center;
-                &:nth-child(1){
-                    justify-content: end;
-                }
-                &:nth-child(3){
-                    justify-content: start;
-                }
-            }
-        }
         .logo{
-            margin: 134px 0 0;
             display: flex;
             align-items: center;
             flex-direction: column;
             gap: 28px;
             letter-spacing: 2px;
+            margin-bottom: 60px;
             img{
                 width: 128px;
             }
@@ -797,13 +782,23 @@ footer{
                     }
                 }
             }
-            span{
+            .text{
                 display: grid;
                 justify-content: center;
                 align-items: flex-end;
-                font-size: 18px;
-                letter-spacing: 2px;
+                font-size: 1.2vw;
+                span{
+                    display: grid;
+                    justify-content: center;
+                    letter-spacing: 2px;
+                    margin-top: 30px;
+                }
             }
+        }
+        .backTop{
+            display: grid;
+            justify-content: center;
+            align-items: flex-end;
         }
     }
 }
