@@ -8,20 +8,20 @@ p {
 }
 
 h1 {
-  font-size: 64px;
+  font-size: 3.33333vw;
   color: #564d4d;
 }
 
 h2 {
-  font-size: 48px;
+  font-size: 2.5vw;
 }
 
 h3 {
-  font-size: 36px;
+  font-size: 1.88vw;
 }
 
 h4 {
-  font-size: 24px;
+  font-size: 1.25vw;
 }
 
 h5 {
@@ -115,10 +115,10 @@ main .firstSection .container span {
 main .firstSection .container span::before, main .firstSection .container span::after {
   content: "";
   width: 4px;
-  height: 100vh;
+  height: 60vh;
   background-color: #564d4d;
   position: absolute;
-  top: -340%;
+  top: -200%;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -126,7 +126,7 @@ main .firstSection .container span::before, main .firstSection .container span::
 
 main .firstSection .container span::after {
   top: unset;
-  bottom: -340%;
+  bottom: -200%;
 }
 
 main .firstSection .container .logo {
@@ -208,18 +208,6 @@ main .firstSection .container .interduce .context .textBackground .text-group p 
   margin-top: 30px;
 }
 
-main .firstSection .container .interduce .context .textBackground .text-group ul {
-  margin-top: 45px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  color: #603210;
-}
-
-main .firstSection .container .interduce .context .textBackground .text-group ul li:nth-child(2) {
-  margin: 0 17px;
-}
-
 main .firstSection .container .interduce .context h5 {
   position: absolute;
   top: 100px;
@@ -246,13 +234,9 @@ main .firstSection .container .interduce .context:nth-child(4) .textBackground {
 }
 
 main .firstSection .container .interduce .context:nth-child(4) h5 {
-  top: 86px;
+  top: 113px;
   right: unset;
   left: 22.5%;
-}
-
-main .firstSection .container .interduce .context:nth-child(5) h5 {
-  top: 113px;
 }
 
 main .secondSection-group .secondSection {

@@ -13,17 +13,17 @@ p {
     color: $brownDark;
 }
 h1 {
-    font-size: 64px;
+    font-size: 3.33333vw;
     color: $black;
 }
 h2 {
-    font-size: 48px;
+    font-size: 2.5vw;
 }
 h3 {
-    font-size: 36px;
+    font-size: 1.88vw;
 }
 h4 {
-    font-size: 24px;
+    font-size: 1.25vw;
 }
 h5 {
     font-size: 22px;
@@ -94,16 +94,17 @@ main {
                 &::after {
                     content: "";
                     width: 4px;
-                    height: 100vh;
+                    height: 60vh;
                     background-color: $black;
                     position: absolute;
-                    top: -340%;
+                    // top: -340%;
+                    top: -200%; 
                     left: 50%;
                     transform: translateX(-50%);
                 }
                 &::after {
                     top: unset;
-                    bottom: -340%;
+                    bottom: -200%; 
                 }
             }
             .logo {
@@ -165,16 +166,17 @@ main {
                                 letter-spacing: 0.4px;
                                 margin-top: 30px;
                             }
-                            ul {
-                                margin-top: 45px;
-                                display: flex;
-                                color: $brownDark;
-                                li {
-                                    &:nth-child(2) {
-                                        margin: 0 17px;
-                                    }
-                                }
-                            }
+                            // ul {
+                            //     margin-top: 45px;
+                            //     display: flex;
+                            //     color: $brownDark;
+                            //     li {
+                            //         font-size: 14px;
+                            //         &:nth-child(2) {
+                            //             margin: 0 17px;
+                            //         }
+                            //     }
+                            // }
                         }
                     }
                     h5 {
@@ -196,16 +198,17 @@ main {
                             right: 36%;
                         }
                         h5 {
-                            top: 86px;
+                            // top: 86px;
+                            top: 113px; 
                             right: unset;
                             left: 22.5%;
                         }
                     }
-                    &:nth-child(5) {
-                        h5 {
-                            top: 113px;
-                        }
-                    }
+                    // &:nth-child(5) {
+                    //     h5 {
+                    //         top: 113px;
+                    //     }
+                    // }
                 }
             }
         }

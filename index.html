@@ -54,59 +54,9 @@
                             <h5>陳耀訓</h5>
                         </div>
                         <div class="context">
-                            <img src="/img/1st-img2.png" alt="fig_2">
-                            <div class="textBackground">
-                                <div class="text-group">
-                                    <p>
-                                        2017年，Mondial du Pain第六屆世界麵包大賽，冠軍。
-                                        <br>
-                                        <br>
-                                        2016年，Mondial du Pain第六屆世界麵包大賽，台灣代表選拔賽，冠軍。
-                                        <br>
-                                        <br>
-                                        2014、2016年世界麵包大賽-台灣代表選拔賽，法國長棍麵包與歐式特色麵包組，銅牌獎。
-                                        <br>
-                                        <br>
-                                        2012年，苗育秀先生烘焙達仁麵包大賽，亞軍。
-                                    </p>
-                                    <ul>
-                                        <li>
-                                            ·佐佐義美食館(巴黎波波) 主廚
-                                            <br>
-                                            <br>
-                                            ·巴提麵包店(巴蕾麵)
-                                            <br>
-                                            <br>
-                                            ·浩偉興業公司(羅娃麵)
-                                        </li>
-                                        <li>
-                                            ·順利華工坊
-                                            <br>
-                                            <br>
-                                            ·樂多國際行銷
-                                            <br>
-                                            <br>
-                                            ·逢甲烘焙公司(咕咕霍夫)
-                                        </li>
-                                        <li>
-                                            ·福順股份公司(福華飯店)
-                                            <br>
-                                            <br>
-                                            ·馥曼蛋糕店
-                                            <br>
-                                            <br>
-                                            ·正統食品公司(不二家)
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <h5>過往經歷</h5>
-                        </div>
-                        <div class="context">
                             <img src="/img/1st-img3.png" alt="fig_1">
                             <div class="textBackground">
                                 <p>
-
                                     心裡放著家鄉，這也反映在店名「陳耀訓麵包埠YOSHI
                                     BAKERY」。「埠」即港口，也意示著家鄉鹿港，並隱喻著讓他的麵包帶大家去旅行，品嚐世界各地的美味；而日文YOSHI，除了和他的中文名「耀訓」發音接近，也是「更好」的意思，以此時時刻刻激勵著陳耀訓不自滿、不停滯、在手藝上追求「更好」的初衷。
                                     <br>
@@ -463,55 +413,11 @@
             </div>
         </div>
     </footer>
-    <div id="fb-root"></div>
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v11.0"
-        nonce="SQTPUdTj"></script>
     <!-- swiperJS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script>
-        var swiper = new Swiper(".mySwiper", {
-            slidesPerView: 'auto',
-            spaceBetween: 45,
-            centeredSlides: true,
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-        });
-        var swiper = new Swiper(".cardSwiper", {
-            effect: "coverflow",
-            grabCursor: true,
-            centeredSlides: true,
-            slidesPerView: "auto",
-            loop: true,
-            coverflowEffect: {
-                rotate: 0,
-                stretch: 0,
-                depth: 100,
-                modifier: 2,
-                slideShadows: true,
-            },
-
-        });
-    </script>
+    <script src="./js/swiper.js"></script>
     <!-- Contain Us button -->
-    <script>
-        let form = document.querySelector('.form')
-        let contain_us = document.querySelector('.contain-us-box')
-        let join_family = document.querySelector('.join-family-box')
-        let attachment = document.querySelector('.attachment')
-        function active() {
-            let x = this.dataset.x
-            if (x == 1) {
-                attachment.style.display = 'none'
-            } else {
-                attachment.style.display = 'block'
-            }
-            form.classList.toggle('active')
-        }
-        contain_us.addEventListener('click', active)
-        join_family.addEventListener('click', active)
-    </script>
+    <script src="./js/contain_us_button.js"></script>
 </body>
 
 </html>
