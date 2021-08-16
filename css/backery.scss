@@ -2,6 +2,7 @@ $pink: #ffd3ce;
 $black: #564d4d;
 $brownDark: #603210;
 $brownLight: #823d08;
+$logoBrown:#A38634;
 $orange: #feb768;
 $yellow: #fff6e1;
 h2,
@@ -43,11 +44,11 @@ body {
 }
 
 nav {
-    position: fixed;
-    right: 43px;
-    top: 43px;
-    z-index: 99;
     .menu {
+        position: fixed;
+        right: 43px;
+        top: 43px;
+        z-index: 100;
         width: 6.9vw;
         height: 6.9vw;
         border: 2px solid $pink;
@@ -56,10 +57,73 @@ nav {
         justify-content: center;
         align-items: center;
         filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-        z-index: 99;
         span {
             position: relative; 
         }
+        &::before,&::after{
+            content: '';
+            width: 30px;
+            border: 1px solid $brownDark;
+            background-color: $brownDark;
+            position: absolute;
+            opacity: 0;
+            transform: rotate(45deg);
+        }
+        &::after{
+            transform: rotate(135deg);
+        }
+    }
+    .active{
+        border: transparent;
+        span{
+            opacity: 0;
+        }
+        &::before,&::after{
+            opacity: 1;
+        }
+    }
+    .menuList{
+        z-index: 99;
+        position: fixed;
+        top: 0;
+        right: 0;
+        background-color: #fff;
+        padding: 0 180px;
+        height: 0;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        letter-spacing: 2px;
+        ul{
+            li{
+                margin-top: 32px;
+                text-align: right;
+                a{
+                    h5{
+                        color: $brownDark;
+                        font-size: 24px;
+                    }
+                    span{
+                        display: block;
+                        margin-top: 12px;
+                        color: $logoBrown;
+                    }
+                }
+            }
+        }
+        .social{
+            .link{
+                display: block;
+                color: $brownLight;
+                text-align: right;
+                margin-top: 12px;
+            }
+        }
+    }
+    .open{
+        height: 100vh;
+        padding: 120px 180px 60px;
     }
 }
 

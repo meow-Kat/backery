@@ -46,14 +46,11 @@ body {
   position: relative;
 }
 
-nav {
+nav .menu {
   position: fixed;
   right: 43px;
-  top: 86px;
-  z-index: 99;
-}
-
-nav .menu {
+  top: 43px;
+  z-index: 100;
   width: 6.9vw;
   height: 6.9vw;
   border: 2px solid #ffd3ce;
@@ -69,11 +66,88 @@ nav .menu {
           align-items: center;
   -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
           filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  z-index: 99;
 }
 
 nav .menu span {
   position: relative;
+}
+
+nav .menu::before, nav .menu::after {
+  content: '';
+  width: 30px;
+  border: 1px solid #603210;
+  background-color: #603210;
+  position: absolute;
+  opacity: 0;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+nav .menu::after {
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+}
+
+nav .active {
+  border: transparent;
+}
+
+nav .active span {
+  opacity: 0;
+}
+
+nav .active::before, nav .active::after {
+  opacity: 1;
+}
+
+nav .menuList {
+  z-index: 99;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #fff;
+  padding: 0 180px;
+  height: 0;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  letter-spacing: 2px;
+}
+
+nav .menuList ul li {
+  margin-top: 32px;
+  text-align: right;
+}
+
+nav .menuList ul li a h5 {
+  color: #603210;
+  font-size: 24px;
+}
+
+nav .menuList ul li a span {
+  display: block;
+  margin-top: 12px;
+  color: #A38634;
+}
+
+nav .menuList .social .link {
+  display: block;
+  color: #823d08;
+  text-align: right;
+  margin-top: 12px;
+}
+
+nav .open {
+  height: 100vh;
+  padding: 120px 180px 60px;
 }
 
 main .banner > iframe {
