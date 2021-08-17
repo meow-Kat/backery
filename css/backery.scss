@@ -42,6 +42,7 @@ body {
 .container {
     padding: 0 40px;
     position: relative;
+    width: 100%;
 }
 .anchor {
     width: 100%;
@@ -226,7 +227,7 @@ main {
                         height: 490px;
                         position: absolute;
                         top: 139px;
-                        left: 36%;
+                        left: 39%;
                         background-color: #fff;
                         display: flex;
                         justify-content: center;
@@ -656,7 +657,7 @@ main {
         overflow: hidden;
         .container {
             > span {
-                width: 100%;
+                width: calc(100% - 80px);
                 display: block;
                 position: unset;
                 text-align: center;
@@ -665,9 +666,15 @@ main {
                 color: $brownDark;
                 background-color: #fff;
                 border: 10px solid $brownDark;
+                z-index: -1;
+                position: absolute;
+                top: 45%;
+            }
+            h1{
+                padding-top: 13%;
             }
             div {
-                margin: 60px 0;
+                margin: 1vw 0;
                 width: 100%;
                 .iframe {
                     width: max-content;

@@ -45,6 +45,7 @@ body {
 .container {
   padding: 0 40px;
   position: relative;
+  width: 100%;
 }
 
 .anchor {
@@ -276,7 +277,7 @@ main .firstSection .container .interduce .context .textBackground {
   height: 490px;
   position: absolute;
   top: 139px;
-  left: 36%;
+  left: 39%;
   background-color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -833,7 +834,7 @@ main .fifthSection {
 }
 
 main .fifthSection .container > span {
-  width: 100%;
+  width: calc(100% - 80px);
   display: block;
   position: unset;
   text-align: center;
@@ -842,10 +843,17 @@ main .fifthSection .container > span {
   color: #603210;
   background-color: #fff;
   border: 10px solid #603210;
+  z-index: -1;
+  position: absolute;
+  top: 45%;
+}
+
+main .fifthSection .container h1 {
+  padding-top: 13%;
 }
 
 main .fifthSection .container div {
-  margin: 60px 0;
+  margin: 1vw 0;
   width: 100%;
 }
 
