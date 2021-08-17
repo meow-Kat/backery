@@ -364,7 +364,7 @@
         </div>
         <div class="fifthSection">
             <div class="container">
-                <span>YOSHI BAKERY</span>
+                <span class="parallax">YOSHI BAKERY</span>
                 <h1>facebook</h1>
                 <div>
                     <div class="iframe">
@@ -457,6 +457,53 @@
     <script src="./js/contain_us_button.js"></script>
     <!-- menu button -->
     <script src="./js/menu.js"></script>
+
+    <script>
+        function debounce(func, wait = 20, immediate = true) {
+            var timeout;
+            return function () {
+                var context = this, args = arguments;
+                var later = function () {
+                    timeout = null;
+                    if (!immediate) func.apply(context, args);
+                };
+                var callNow = immediate && !timeout;
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+                if (callNow) func.apply(context, args);
+            };
+        };
+
+        let parallax = document.querySelector('.parallax')
+        let iframe = document.querySelector('.iframe')
+        function parallaxMove() {
+            const moveTo = (parallax.offsetTop) + (parallax.clientHeight / 2);
+            if (window.scrollY > moveTo) {
+                // console.log('123');
+                // parallax.style.top = '0'
+                // scrollY要大於某個數字 也就是說要撞到我的那條麵包店標題
+            }
+        }
+
+        function scrollHander() {
+            let windowTop = window.scrollY
+            let windowBottom = windowTop + window.innerHeight
+            let fifthSectionTop = document.querySelector('.fifthSection').offsetTop
+
+            console.log(parallax.offsetTop);
+            if ( fifthSectionTop + parallax.offsetTop + parallax.clientHeight / 2 < windowBottom) {
+                // parallax.style.top = windowTop * 2 '0'
+            }
+
+        }
+
+        window.addEventListener('scroll', scrollHander)
+
+
+
+
+
+    </script>
 </body>
 
 </html>

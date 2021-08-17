@@ -833,7 +833,7 @@ main .fifthSection {
   overflow: hidden;
 }
 
-main .fifthSection .container > span {
+main .fifthSection .container .parallax {
   width: calc(100% - 80px);
   display: block;
   position: unset;

@@ -656,7 +656,7 @@ main {
         max-width: 1920px;
         overflow: hidden;
         .container {
-            > span {
+            .parallax {
                 width: calc(100% - 80px);
                 display: block;
                 position: unset;
