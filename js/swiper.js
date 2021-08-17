@@ -1,5 +1,5 @@
 
-var swiper = new Swiper(".mySwiper", {
+var swiper = new Swiper(".newsSwiper", {
     slidesPerView: 'auto',
     spaceBetween: 45,
     centeredSlides: true,
@@ -21,5 +21,4 @@ var swiper = new Swiper(".cardSwiper", {
         modifier: 2,
         slideShadows: true,
     },
-
 });

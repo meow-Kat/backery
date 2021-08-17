@@ -4,3 +4,6 @@ menu.onclick = function () {
     menu.classList.toggle('active')
     menuList.classList.toggle('open')
 }
+
+// window.addEventListener('scroll',function () {
+// })

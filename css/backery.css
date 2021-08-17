@@ -35,6 +35,7 @@ h6 {
 * {
   -webkit-transition-duration: 0.5s;
           transition-duration: 0.5s;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -46,6 +47,11 @@ body {
   position: relative;
 }
 
+.anchor {
+  width: 100%;
+  height: 1px;
+}
+
 nav .menu {
   position: fixed;
   right: 43px;
@@ -53,7 +59,9 @@ nav .menu {
   z-index: 100;
   width: 6.9vw;
   height: 6.9vw;
-  border: 2px solid #ffd3ce;
+  border: 5px solid #ffd3ce;
+  background-color: #fff;
+  color: #a38634;
   border-radius: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -66,6 +74,7 @@ nav .menu {
           align-items: center;
   -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
           filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  cursor: pointer;
 }
 
 nav .menu span {
@@ -73,7 +82,7 @@ nav .menu span {
 }
 
 nav .menu::before, nav .menu::after {
-  content: '';
+  content: "";
   width: 30px;
   border: 1px solid #603210;
   background-color: #603210;
@@ -90,6 +99,7 @@ nav .menu::after {
 
 nav .active {
   border: transparent;
+  background: transparent;
 }
 
 nav .active span {
@@ -123,7 +133,7 @@ nav .menuList {
 }
 
 nav .menuList ul li {
-  margin-top: 32px;
+  margin-top: 2vw;
   text-align: right;
 }
 
@@ -134,20 +144,37 @@ nav .menuList ul li a h5 {
 
 nav .menuList ul li a span {
   display: block;
-  margin-top: 12px;
-  color: #A38634;
+  margin-top: 0.8vw;
+  color: #a38634;
+}
+
+nav .menuList .social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 nav .menuList .social .link {
-  display: block;
   color: #823d08;
-  text-align: right;
-  margin-top: 12px;
+  margin-left: 1vw;
+  font-size: 2vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
 nav .open {
   height: 100vh;
-  padding: 120px 180px 60px;
+  padding: 3.5vw 180px;
 }
 
 main .banner > iframe {
@@ -475,16 +502,16 @@ main .secondSection-group .secondSection-swiper {
   margin-bottom: 111px;
 }
 
-main .secondSection-group .secondSection-swiper .mySwiper .swiper-wrapper .swiper-slide {
+main .secondSection-group .secondSection-swiper .newsSwiper .swiper-wrapper .swiper-slide {
   width: auto !important;
   background-color: #fff6e1;
 }
 
-main .secondSection-group .secondSection-swiper .mySwiper .swiper-wrapper .swiper-slide .photo {
+main .secondSection-group .secondSection-swiper .newsSwiper .swiper-wrapper .swiper-slide .photo {
   position: relative;
 }
 
-main .secondSection-group .secondSection-swiper .mySwiper .swiper-wrapper .swiper-slide .photo .hashTag {
+main .secondSection-group .secondSection-swiper .newsSwiper .swiper-wrapper .swiper-slide .photo .hashTag {
   position: absolute;
   bottom: 20px;
   left: 20px;
@@ -493,7 +520,7 @@ main .secondSection-group .secondSection-swiper .mySwiper .swiper-wrapper .swipe
   display: flex;
 }
 
-main .secondSection-group .secondSection-swiper .mySwiper .swiper-wrapper .swiper-slide .photo .hashTag a {
+main .secondSection-group .secondSection-swiper .newsSwiper .swiper-wrapper .swiper-slide .photo .hashTag a {
   width: 76px;
   height: 27px;
   margin-left: 10px;
@@ -510,36 +537,36 @@ main .secondSection-group .secondSection-swiper .mySwiper .swiper-wrapper .swipe
   border: 2px solid #823d08;
 }
 
-main .secondSection-group .secondSection-swiper .mySwiper .swiper-wrapper .swiper-slide .photo .hashTag a span {
+main .secondSection-group .secondSection-swiper .newsSwiper .swiper-wrapper .swiper-slide .photo .hashTag a span {
   color: #fff;
   font-size: 12px;
 }
 
-main .secondSection-group .secondSection-swiper .mySwiper .swiper-wrapper .swiper-slide .photo .hashTag a:nth-child(1) {
+main .secondSection-group .secondSection-swiper .newsSwiper .swiper-wrapper .swiper-slide .photo .hashTag a:nth-child(1) {
   margin-left: unset;
 }
 
-main .secondSection-group .secondSection-swiper .mySwiper .swiper-wrapper .swiper-slide .photo .hashTag a:hover {
+main .secondSection-group .secondSection-swiper .newsSwiper .swiper-wrapper .swiper-slide .photo .hashTag a:hover {
   background-color: #fff;
 }
 
-main .secondSection-group .secondSection-swiper .mySwiper .swiper-wrapper .swiper-slide .photo .hashTag a:hover span {
+main .secondSection-group .secondSection-swiper .newsSwiper .swiper-wrapper .swiper-slide .photo .hashTag a:hover span {
   color: #823d08;
 }
 
-main .secondSection-group .secondSection-swiper .mySwiper .swiper-wrapper .swiper-slide .text {
+main .secondSection-group .secondSection-swiper .newsSwiper .swiper-wrapper .swiper-slide .text {
   padding: 24px 20px;
 }
 
-main .secondSection-group .secondSection-swiper .mySwiper .swiper-wrapper .swiper-slide .text h6 {
+main .secondSection-group .secondSection-swiper .newsSwiper .swiper-wrapper .swiper-slide .text h6 {
   margin-bottom: 10px;
 }
 
-main .secondSection-group .secondSection-swiper .mySwiper .swiper-wrapper .swiper-slide .text span {
+main .secondSection-group .secondSection-swiper .newsSwiper .swiper-wrapper .swiper-slide .text span {
   font-size: 14px;
 }
 
-main .secondSection-group .secondSection-swiper .mySwiper .swiper-wrapper .swiper-slide .text p {
+main .secondSection-group .secondSection-swiper .newsSwiper .swiper-wrapper .swiper-slide .text p {
   width: 548px;
   margin: 10px 0 20px;
   overflow: hidden;
@@ -548,11 +575,11 @@ main .secondSection-group .secondSection-swiper .mySwiper .swiper-wrapper .swipe
   -webkit-box-orient: vertical;
 }
 
-main .secondSection-group .secondSection-swiper .mySwiper .swiper-wrapper .swiper-slide .text a {
+main .secondSection-group .secondSection-swiper .newsSwiper .swiper-wrapper .swiper-slide .text a {
   margin-left: calc(100% - 134px);
 }
 
-main .secondSection-group .secondSection-swiper .mySwiper .swiper-wrapper .swiper-slide .text a span {
+main .secondSection-group .secondSection-swiper .newsSwiper .swiper-wrapper .swiper-slide .text a span {
   font-size: 16px;
   font-weight: bold;
   margin-right: 14px;
@@ -573,152 +600,6 @@ main .thirdSection .container h1 {
   margin-bottom: 48px;
 }
 
-main .thirdSection .container .dropdown {
-  position: absolute;
-  top: 12px;
-}
-
-main .thirdSection .container .dropdown .select {
-  position: relative;
-  overflow: hidden;
-  display: block;
-  margin-left: 47px;
-  height: 100%;
-  border-bottom: 0px;
-  border-radius: 30px 30px 0 0;
-  font-size: 36px;
-  font-weight: bolder;
-}
-
-main .thirdSection .container .dropdown .select > i.toggle {
-  position: absolute;
-  z-index: 4;
-  color: #823d08;
-}
-
-main .thirdSection .container .dropdown .select .title,
-main .thirdSection .container .dropdown .select .placeholder {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 100%;
-  height: 100%;
-  padding: 37px 4.2vw;
-  background: #feb768;
-  color: #823d08;
-  cursor: pointer;
-  font-size: 36px;
-  font-weight: bolder;
-}
-
-main .thirdSection .container .dropdown .select > input {
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-  display: block;
-  opacity: 0;
-  cursor: pointer;
-}
-
-main .thirdSection .container .dropdown .select > input:checked div.options label.option .title {
-  display: none !important;
-}
-
-main .thirdSection .container .dropdown .select > input:not(:checked) {
-  z-index: 4;
-}
-
-main .thirdSection .container .dropdown .select > input:not(:checked) ~ label.option > span.title {
-  display: none;
-}
-
-main .thirdSection .container .dropdown .select > input:not(:checked):hover ~ label.option input:checked ~ span.title {
-  background-color: #fff6e1;
-  color: #feb768;
-}
-
-main .thirdSection .container .dropdown .select > input:disabled {
-  cursor: no-drop;
-}
-
-main .thirdSection .container .dropdown .select > input:hover + .placeholder {
-  background-color: #fff6e1;
-  color: #feb768;
-}
-
-main .thirdSection .container .dropdown .select > span.placeholder {
-  position: relative;
-  z-index: 0;
-  display: inline-block;
-  width: 100%;
-  color: #823d08;
-  border-top: 0px;
-}
-
-main .thirdSection .container .dropdown .select label.option {
-  display: block;
-  overflow: hidden;
-  z-index: 1;
-  width: 100%;
-  -webkit-transition: all 1s ease-out;
-  transition: all 1s ease-out;
-}
-
-main .thirdSection .container .dropdown .select label.option span.title {
-  position: relative;
-  z-index: 2;
-  -webkit-transition: background 0.3s ease-out;
-  transition: background 0.3s ease-out;
-}
-
-main .thirdSection .container .dropdown .select label.option span.title:hover {
-  color: #feb768;
-  background: #fff6e1;
-  -webkit-box-shadow: inset 0px 1px 0px rgba(0, 0, 0, 0.1);
-          box-shadow: inset 0px 1px 0px rgba(0, 0, 0, 0.1);
-}
-
-main .thirdSection .container .dropdown .select label.option input {
-  display: none;
-}
-
-main .thirdSection .container .dropdown .select label.option input:checked ~ span.title {
-  position: absolute;
-  display: block;
-  z-index: 3;
-  top: 0px;
-  font-size: 36px;
-  background: #feb768;
-  border-top: 0px;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  color: #823d08;
-  width: 100%;
-}
-
-main .thirdSection .container .dropdown .select label.option input:disabled ~ span.title {
-  color: #aaa;
-}
-
-main .thirdSection .container .dropdown .select label.option input:disabled ~ span.title:hover {
-  background: none;
-  cursor: no-drop;
-}
-
-main .thirdSection .container .dropdown .select label.option:nth-last-child(1) span {
-  border-radius: 0 0 10px 10px;
-}
-
 main .thirdSection .container .background {
   width: 100%;
   max-width: 1834px;
@@ -736,6 +617,85 @@ main .thirdSection .container .background {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
+}
+
+main .thirdSection .container .background ul {
+  width: 100%;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transform: translateY(calc(-100% - 4px));
+          transform: translateY(calc(-100% - 4px));
+}
+
+main .thirdSection .container .background ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: -3.5vw;
+  z-index: 6;
+}
+
+main .thirdSection .container .background ul li .filter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 9vw;
+  height: 87px;
+  background-color: #ffd3ce;
+  color: #603210;
+  border-radius: 30px 30px 0 0;
+  font-size: 1.5vw;
+  font-weight: bold;
+  border: 3px solid #603210;
+  border-bottom: none;
+}
+
+main .thirdSection .container .background ul li:hover {
+  color: #feb768;
+  margin-left: 3px;
+}
+
+main .thirdSection .container .background ul li:hover .filter {
+  background-color: #fff;
+}
+
+main .thirdSection .container .background ul li:nth-child(1) {
+  margin-left: 30px;
+}
+
+main .thirdSection .container .background ul li:nth-child(1) .filter {
+  background-color: #feb768;
+}
+
+main .thirdSection .container .background ul li:nth-child(1):hover {
+  margin-left: 30px;
+}
+
+main .thirdSection .container .background ul li:nth-child(2) {
+  z-index: 5;
+}
+
+main .thirdSection .container .background ul li:nth-child(3) {
+  z-index: 4;
+}
+
+main .thirdSection .container .background ul li:nth-child(4) {
+  z-index: 3;
 }
 
 main .thirdSection .container .background .cardSwiper {
