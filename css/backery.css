@@ -76,6 +76,7 @@ nav .menu {
   -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
           filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   cursor: pointer;
+  opacity: 0;
 }
 
 nav .menu span {
@@ -96,6 +97,10 @@ nav .menu::before, nav .menu::after {
 nav .menu::after {
   -webkit-transform: rotate(135deg);
           transform: rotate(135deg);
+}
+
+nav .show {
+  opacity: 1;
 }
 
 nav .active {
@@ -846,22 +851,25 @@ main .fifthSection .container .parallax {
   z-index: -1;
   position: absolute;
   top: 45%;
-}
-
-main .fifthSection .container h1 {
-  padding-top: 13%;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
 }
 
 main .fifthSection .container div {
-  margin: 1vw 0;
+  margin: 4vw 0;
   width: 100%;
 }
 
 main .fifthSection .container div .iframe {
+  padding-top: 20%;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
   margin: auto;
+}
+
+main .fifthSection .container div .iframe img {
+  border-radius: 30px;
 }
 
 main .fifthSection .container div .bottom {

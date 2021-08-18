@@ -5,5 +5,11 @@ menu.onclick = function () {
     menuList.classList.toggle('open')
 }
 
-// window.addEventListener('scroll',function () {
-// })
+window.addEventListener('scroll',function () {
+    let firstSection = document.querySelector('.firstSection').offsetTop
+    if (window.scrollY > firstSection) {
+        menu.classList.add('show')
+    }else{
+        menu.classList.remove('show')
+    }
+})

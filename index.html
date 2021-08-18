@@ -70,10 +70,10 @@
     <main>
         <div id="anchor-top" class="anchor"></div>
         <div class="banner">
-            <!-- <iframe src="https://www.youtube.com/embed/RDs0WEA84_o?mute=1&autoplay=1" title="YouTube video player"
+            <iframe src="https://www.youtube.com/embed/RDs0WEA84_o?mute=1&autoplay=1" title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen></iframe> -->
+                allowfullscreen></iframe>
         </div>
         <div id="anchor1" class="anchor"></div>
         <div class="firstSection">
@@ -365,14 +365,10 @@
         <div class="fifthSection">
             <div class="container">
                 <span class="parallax">YOSHI BAKERY</span>
-                <h1>facebook</h1>
+                <!-- <h1>facebook</h1> -->
                 <div>
                     <div class="iframe">
-                        <iframe
-                            src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fyoshibakery%2F&tabs=timeline&width=500&height=600&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
-                            width="500" height="600" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
-                            allowfullscreen="true"
-                            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                        <img src="./img/5th-img.png" alt="">
                     </div>
                     <div class="bottom">
                         <span class="circle"></span>
@@ -458,43 +454,24 @@
     <!-- menu button -->
     <script src="./js/menu.js"></script>
 
-    <script>
-        function debounce(func, wait = 20, immediate = true) {
-            var timeout;
-            return function () {
-                var context = this, args = arguments;
-                var later = function () {
-                    timeout = null;
-                    if (!immediate) func.apply(context, args);
-                };
-                var callNow = immediate && !timeout;
-                clearTimeout(timeout);
-                timeout = setTimeout(later, wait);
-                if (callNow) func.apply(context, args);
-            };
-        };
-
-        let parallax = document.querySelector('.parallax')
-        let iframe = document.querySelector('.iframe')
-        function parallaxMove() {
-            const moveTo = (parallax.offsetTop) + (parallax.clientHeight / 2);
-            if (window.scrollY > moveTo) {
-                // console.log('123');
-                // parallax.style.top = '0'
-                // scrollY要大於某個數字 也就是說要撞到我的那條麵包店標題
-            }
-        }
-
+    <script>       
         function scrollHander() {
+            let parallax = document.querySelector('.parallax')
+            let fifthSectionTop = document.querySelector('.fifthSection').offsetTop
             let windowTop = window.scrollY
             let windowBottom = windowTop + window.innerHeight
-            let fifthSectionTop = document.querySelector('.fifthSection').offsetTop
 
-            console.log(parallax.offsetTop);
+            // console.log(parallax.offsetTop);
+            console.log(window.scrollY, fifthSectionTop,fifthSectionTop - window.scrollY);
+
             if ( fifthSectionTop + parallax.offsetTop + parallax.clientHeight / 2 < windowBottom) {
-                // parallax.style.top = windowTop * 2 '0'
+                let calcNum =(fifthSectionTop - window.scrollY) / 100
+                if (parallax.style.top < '1%') {
+                    parallax.style.top = '1%'
+                }else {
+                    parallax.style.top = calcNum*5  + '%'
+                }
             }
-
         }
 
         window.addEventListener('scroll', scrollHander)
