@@ -150,6 +150,8 @@ nav {
 }
 
 main {
+    max-width: 1920px;
+    overflow: hidden;
     .banner {
         > iframe {
             width: 100%;

@@ -183,6 +183,11 @@ nav .open {
   padding: 3.5vw 180px;
 }
 
+main {
+  max-width: 1920px;
+  overflow: hidden;
+}
+
 main .banner > iframe {
   width: 100%;
   height: 100vh;
