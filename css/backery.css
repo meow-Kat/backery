@@ -50,7 +50,6 @@ body {
 
 .anchor {
   width: 100%;
-  height: 1px;
 }
 
 nav .menu {
@@ -659,12 +658,13 @@ main .thirdSection .container .background ul li .filter {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding-right: 1vw;
   width: 9vw;
   height: 87px;
   background-color: #ffd3ce;
@@ -674,6 +674,8 @@ main .thirdSection .container .background ul li .filter {
   font-weight: bold;
   border: 3px solid #603210;
   border-bottom: none;
+  -webkit-transition-duration: 0s;
+          transition-duration: 0s;
 }
 
 main .thirdSection .container .background ul li:hover {
@@ -683,6 +685,12 @@ main .thirdSection .container .background ul li:hover {
 
 main .thirdSection .container .background ul li:hover .filter {
   background-color: #fff;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-right: unset;
+  -webkit-transition-duration: 0s;
+          transition-duration: 0s;
 }
 
 main .thirdSection .container .background ul li:nth-child(1) {
@@ -690,6 +698,10 @@ main .thirdSection .container .background ul li:nth-child(1) {
 }
 
 main .thirdSection .container .background ul li:nth-child(1) .filter {
+  padding-right: unset;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background-color: #feb768;
 }
 
@@ -838,7 +850,6 @@ main .fourthSection .container .img-group img:nth-child(6) {
 }
 
 main .fifthSection {
-  margin-bottom: 84px;
   max-width: 1920px;
   overflow: hidden;
 }
@@ -895,6 +906,7 @@ main .fifthSection .container div .bottom::before, main .fifthSection .container
   right: 500px;
   width: 750px;
   border: 1px solid #603210;
+  background-color: #603210;
 }
 
 main .fifthSection .container div .bottom::after {
@@ -927,6 +939,7 @@ main .sixthSection .container h1 {
 }
 
 main .sixthSection .container .containUs {
+  height: 35.5vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -995,6 +1008,29 @@ main .sixthSection .container .containUs div:nth-child(2):hover {
 
 main .sixthSection .container .containUs div:nth-child(2):hover span {
   color: #fff6e1;
+}
+
+main .sixthSection .container .containUs .animation {
+  -webkit-animation: cut 3s ease;
+          animation: cut 3s ease;
+}
+
+@-webkit-keyframes cut {
+  0% {
+    margin: 0;
+  }
+  10% {
+    background-color: #ffd3ce;
+  }
+}
+
+@keyframes cut {
+  0% {
+    margin: 0;
+  }
+  10% {
+    background-color: #ffd3ce;
+  }
 }
 
 main .sixthSection .container form {
