@@ -15,6 +15,8 @@
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
     <!-- swiper js -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <!-- AOS js -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
@@ -446,41 +448,17 @@
         </div>
     </footer>
 
-    <!-- swiperJS -->
+    <!-- swiper js -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="./js/swiper.js"></script>
-    <!-- Contain Us button -->
+    <!-- AOS js -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script><script> AOS.init();</script>
+    <!-- 6th Contain Us button -->
     <script src="./js/contain_us_button.js"></script>
     <!-- menu button -->
     <script src="./js/menu.js"></script>
-
-    <script>       
-        function scrollHander() {
-            let parallax = document.querySelector('.parallax')
-            let fifthSectionTop = document.querySelector('.fifthSection').offsetTop
-            let windowTop = window.scrollY
-            let windowBottom = windowTop + window.innerHeight
-
-            // console.log(parallax.offsetTop);
-            console.log(window.scrollY, fifthSectionTop,fifthSectionTop - window.scrollY);
-
-            if ( fifthSectionTop + parallax.offsetTop + parallax.clientHeight / 2 < windowBottom) {
-                let calcNum =(fifthSectionTop - window.scrollY) / 100
-                if (parallax.style.top < '1%') {
-                    parallax.style.top = '1%'
-                }else {
-                    parallax.style.top = calcNum*5  + '%'
-                }
-            }
-        }
-
-        window.addEventListener('scroll', scrollHander)
-
-
-
-
-
-    </script>
+    <!-- 5th Parallax -->
+    <script src="./js/parallax.js"></script>
 </body>
 
 </html>
