@@ -253,8 +253,8 @@ main .firstSection .container .interduce {
 }
 
 main .firstSection .container .interduce h1 {
-  margin-top: -40px;
-  margin-left: 241px;
+  margin-top: -4%;
+  margin-left: 13.1%;
 }
 
 main .firstSection .container .interduce h1:nth-child(2) {
@@ -267,8 +267,8 @@ main .firstSection .container .interduce h1:nth-child(2) {
 main .firstSection .container .interduce .context {
   height: 629px;
   position: relative;
-  margin-top: 175px;
-  margin-left: 166px;
+  margin-top: 9%;
+  margin-left: 9%;
 }
 
 main .firstSection .container .interduce .context img {
@@ -382,7 +382,7 @@ main .secondSection-group .secondSection .container .background {
   height: 45vw;
   max-height: 863px;
   background-color: #fff6e1;
-  border-radius: 30px;
+  border-radius: 1.5vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -521,6 +521,10 @@ main .secondSection-group .secondSection-swiper .newsSwiper .swiper-wrapper .swi
   position: relative;
 }
 
+main .secondSection-group .secondSection-swiper .newsSwiper .swiper-wrapper .swiper-slide .photo img {
+  width: calc(28.6vw + 40px);
+}
+
 main .secondSection-group .secondSection-swiper .newsSwiper .swiper-wrapper .swiper-slide .photo .hashTag {
   position: absolute;
   bottom: 20px;
@@ -577,7 +581,7 @@ main .secondSection-group .secondSection-swiper .newsSwiper .swiper-wrapper .swi
 }
 
 main .secondSection-group .secondSection-swiper .newsSwiper .swiper-wrapper .swiper-slide .text p {
-  width: 548px;
+  width: 28.6vw;
   margin: 10px 0 20px;
   overflow: hidden;
   display: -webkit-box;
@@ -615,7 +619,7 @@ main .thirdSection .container .background {
   max-width: 1834px;
   height: 43vw;
   max-height: 754px;
-  border-radius: 30px;
+  border-radius: 1.5vw;
   border: 5px solid #feb768;
   background-color: #fff;
   display: -webkit-box;
@@ -666,10 +670,10 @@ main .thirdSection .container .background ul li .filter {
           align-items: center;
   padding-right: 1vw;
   width: 9vw;
-  height: 87px;
+  height: 4.7vw;
   background-color: #ffd3ce;
   color: #603210;
-  border-radius: 30px 30px 0 0;
+  border-radius: 1.5vw 1.5vw 0 0;
   font-size: 1.5vw;
   font-weight: bold;
   border: 3px solid #603210;
@@ -885,7 +889,7 @@ main .fifthSection .container div .iframe {
 }
 
 main .fifthSection .container div .iframe img {
-  border-radius: 30px;
+  border-radius: 1.5vw;
 }
 
 main .fifthSection .container div .bottom {
@@ -1007,19 +1011,19 @@ main .sixthSection .container .containUs div:nth-child(2):hover {
 }
 
 main .sixthSection .container .containUs div:nth-child(2):hover span {
-  color: #fff6e1;
+  color: #fff;
 }
 
 main .sixthSection .container .containUs .animation {
-  -webkit-animation: cut 3s ease;
-          animation: cut 3s ease;
+  -webkit-animation: cut 1.5s ease;
+          animation: cut 1.5s ease;
 }
 
 @-webkit-keyframes cut {
   0% {
     margin: 0;
   }
-  10% {
+  20% {
     background-color: #ffd3ce;
   }
 }
@@ -1028,7 +1032,7 @@ main .sixthSection .container .containUs .animation {
   0% {
     margin: 0;
   }
-  10% {
+  20% {
     background-color: #ffd3ce;
   }
 }
