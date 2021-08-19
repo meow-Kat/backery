@@ -986,7 +986,7 @@ main .sixthSection .container .containUs div span:nth-child(2) {
 }
 
 main .sixthSection .container .containUs div:nth-child(1) {
-  margin-bottom: 100px;
+  margin-bottom: 5.4%;
 }
 
 main .sixthSection .container .containUs div:nth-child(1):hover {
@@ -999,7 +999,7 @@ main .sixthSection .container .containUs div:nth-child(1):hover span {
 
 main .sixthSection .container .containUs div:nth-child(2) {
   background-color: #fff6e1;
-  margin-top: 100px;
+  margin-top: 5.4%;
 }
 
 main .sixthSection .container .containUs div:nth-child(2) span {
@@ -1174,5 +1174,48 @@ footer .container .backTop {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+}
+
+@media (max-width: 992px) {
+  main .firstSection .container .interduce .context img {
+    width: 100%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    z-index: 0;
+  }
+  main .firstSection .container .interduce .context .textBackground {
+    width: 61.3vw;
+    top: 45.5vw;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  main .firstSection .container .interduce .context .textBackground p {
+    width: 42vw;
+  }
+  main .firstSection .container .interduce .context h5 {
+    top: 48vw;
+  }
+  main .firstSection .container .interduce .context:nth-child(4) {
+    margin: 34% 0% 34% 9%;
+  }
+  main .firstSection .container .interduce .context:nth-child(4) img {
+    right: unset;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  main .firstSection .container .interduce .context:nth-child(4) .textBackground {
+    right: unset;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  main .firstSection .container .interduce .context:nth-child(4) h5 {
+    top: 48vw;
+    left: unset;
+    right: 17.5%;
+  }
 }
 /*# sourceMappingURL=backery.css.map */

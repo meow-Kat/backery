@@ -254,17 +254,6 @@ main {
                                 letter-spacing: 0.4px;
                                 margin-top: 30px;
                             }
-                            // ul {
-                            //     margin-top: 45px;
-                            //     display: flex;
-                            //     color: $brownDark;
-                            //     li {
-                            //         font-size: 14px;
-                            //         &:nth-child(2) {
-                            //             margin: 0 17px;
-                            //         }
-                            //     }
-                            // }
                         }
                     }
                     h5 {
@@ -286,17 +275,11 @@ main {
                             right: 36%;
                         }
                         h5 {
-                            // top: 86px;
                             top: 113px;
                             right: unset;
                             left: 22.5%;
                         }
                     }
-                    // &:nth-child(5) {
-                    //     h5 {
-                    //         top: 113px;
-                    //     }
-                    // }
                 }
             }
         }
@@ -769,7 +752,7 @@ main {
                         }
                     }
                     &:nth-child(1) {
-                        margin-bottom: 100px;
+                        margin-bottom: 5.4%;
                         &:hover {
                             background-color: #fff;
                             span {
@@ -779,7 +762,7 @@ main {
                     }
                     &:nth-child(2) {
                         background-color: $yellow;
-                        margin-top: 100px;
+                        margin-top: 5.4%;
                         span {
                             color: $brownLight;
                         }
@@ -897,4 +880,45 @@ footer {
             align-items: flex-end;
         }
     }
+}
+
+@media(max-width:992px){
+    main .firstSection .container .interduce .context{
+        img{
+            width: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 0;
+        }
+        .textBackground{
+            width: 61.3vw;
+            top: 45.5vw;
+            left: 50%;
+            transform: translateX(-50%);
+            p{
+                width: 42vw;
+            }
+        }
+        h5{
+            top: 48vw;
+        }
+        &:nth-child(4){
+            margin: 34% 0% 34% 9%;
+            img{
+                right: unset;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            .textBackground {
+                right: unset;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            h5{
+                top: 48vw;
+                left: unset;
+                right: 17.5%;
+            }
+        }
+    } 
 }
