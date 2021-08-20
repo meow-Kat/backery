@@ -394,6 +394,11 @@ main {
         }
         .secondSection-swiper {
             margin-bottom: 111px;
+            h1{
+                text-align: center;
+                margin-bottom: 2vw;
+                display: none;
+            }
             .newsSwiper {
                 .swiper-wrapper {
                     .swiper-slide {

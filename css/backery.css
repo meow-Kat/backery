@@ -517,6 +517,12 @@ main .secondSection-group .secondSection-swiper {
   margin-bottom: 111px;
 }
 
+main .secondSection-group .secondSection-swiper h1 {
+  text-align: center;
+  margin-bottom: 2vw;
+  display: none;
+}
+
 main .secondSection-group .secondSection-swiper .newsSwiper .swiper-wrapper .swiper-slide {
   width: auto !important;
   background-color: #fff6e1;
