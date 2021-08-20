@@ -624,6 +624,7 @@ main .thirdSection .container .background {
   max-width: 1834px;
   height: 43vw;
   max-height: 754px;
+  min-height: 576px;
   border-radius: 1.5vw;
   border: 5px solid #feb768;
   background-color: #fff;
@@ -746,6 +747,7 @@ main .thirdSection .container .background .cardSwiper .swiper-wrapper {
 
 main .thirdSection .container .background .cardSwiper .swiper-wrapper .swiper-slide {
   width: auto !important;
+  min-width: 234px;
   border-radius: 5px 5px 0 0;
   background-color: #fff6e1;
   -webkit-filter: blur(5px);
@@ -1179,5 +1181,11 @@ footer .container .backTop {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+}
+
+@media (max-width: 992px) {
+  main .thirdSection .container .background {
+    height: 53vw;
+  }
 }
 /*# sourceMappingURL=backery.css.map */
