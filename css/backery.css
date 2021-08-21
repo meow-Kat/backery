@@ -208,7 +208,7 @@ main .firstSection .container {
   position: relative;
 }
 
-main .firstSection .container span {
+main .firstSection .container .logoTitle {
   position: absolute;
   top: 50%;
   left: 40px;
@@ -223,7 +223,7 @@ main .firstSection .container span {
   word-spacing: 6px;
 }
 
-main .firstSection .container span::before, main .firstSection .container span::after {
+main .firstSection .container .logoTitle::before, main .firstSection .container .logoTitle::after {
   content: "";
   width: 4px;
   height: 35vw;
@@ -235,7 +235,7 @@ main .firstSection .container span::before, main .firstSection .container span::
           transform: translateX(-50%);
 }
 
-main .firstSection .container span::after {
+main .firstSection .container .logoTitle::after {
   top: unset;
   bottom: -38vw;
 }
@@ -324,14 +324,26 @@ main .firstSection .container .interduce .context .textBackground .text-group p 
   margin-top: 30px;
 }
 
-main .firstSection .container .interduce .context h5 {
+main .firstSection .container .interduce .context .textBackground h5 {
   position: absolute;
-  top: 5.3vw;
-  right: 17.5%;
+  top: 0;
+  right: 10.5%;
   -webkit-writing-mode: vertical-lr;
       -ms-writing-mode: tb-lr;
           writing-mode: vertical-lr;
   letter-spacing: 5px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+main .firstSection .container .interduce .context .textBackground .more {
+  position: absolute;
+  display: block;
+  right: 1vw;
+  bottom: 1vw;
+  color: #823d08;
+  cursor: pointer;
+  display: none;
 }
 
 main .firstSection .container .interduce .context:nth-child(4) {
@@ -350,9 +362,8 @@ main .firstSection .container .interduce .context:nth-child(4) .textBackground {
 }
 
 main .firstSection .container .interduce .context:nth-child(4) h5 {
-  top: 5.9vw;
   right: unset;
-  left: 22.5%;
+  left: 10.5%;
 }
 
 main .secondSection-group .secondSection {
@@ -1190,8 +1201,36 @@ footer .container .backTop {
 }
 
 @media (max-width: 992px) {
-  main .thirdSection .container .background {
-    height: 53vw;
+  main .firstSection .container span {
+    display: none;
+  }
+  main .firstSection .container .interduce .context {
+    margin-left: unset;
+    height: 34vw;
+  }
+  main .firstSection .container .interduce .context img {
+    left: 0;
+    width: 42vw;
+  }
+  main .firstSection .container .interduce .context .textBackground {
+    top: 0;
+    right: 0;
+    left: unset;
+    height: 28vw;
+  }
+  main .firstSection .container .interduce .context .textBackground p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+  }
+  main .firstSection .container .interduce .context .textBackground .more {
+    display: block;
+  }
+  main .firstSection .container .interduce .context:nth-child(4) .textBackground {
+    left: 0;
+    right: unset;
   }
 }
 /*# sourceMappingURL=backery.css.map */

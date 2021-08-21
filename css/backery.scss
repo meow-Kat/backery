@@ -169,7 +169,7 @@ main {
         }
         .container {
             position: relative;
-            span {
+            .logoTitle {
                 position: absolute;
                 top: 50%;
                 left: 40px;
@@ -257,13 +257,23 @@ main {
                                 margin-top: 30px;
                             }
                         }
-                    }
-                    h5 {
-                        position: absolute;
-                        top: 5.3vw;
-                        right: 17.5%;
-                        writing-mode: vertical-lr;
-                        letter-spacing: 5px;
+                        h5 {
+                            position: absolute;
+                            top: 0;
+                            right: 10.5%;
+                            writing-mode: vertical-lr;
+                            letter-spacing: 5px;
+                            transform: translateY(-50%);
+                        }
+                        .more {
+                            position: absolute;
+                            display: block;
+                            right: 1vw;
+                            bottom: 1vw;
+                            color: $brownLight;
+                            cursor: pointer;
+                            display: none;
+                        }
                     }
                     &:nth-child(4) {
                         margin-left: unset;
@@ -277,9 +287,8 @@ main {
                             right: 36%;
                         }
                         h5 {
-                            top: 5.9vw;
                             right: unset;
-                            left: 22.5%;
+                            left: 10.5%;
                         }
                     }
                 }
@@ -394,7 +403,7 @@ main {
         }
         .secondSection-swiper {
             margin-bottom: 111px;
-            h1{
+            h1 {
                 text-align: center;
                 margin-bottom: 2vw;
                 display: none;
@@ -406,7 +415,7 @@ main {
                         background-color: $yellow;
                         .photo {
                             position: relative;
-                            img{
+                            img {
                                 width: calc(28.6vw + 40px);
                             }
                             .hashTag {
@@ -778,7 +787,7 @@ main {
                         &:hover {
                             background-color: $black;
                             span {
-                                color: #fff; 
+                                color: #fff;
                             }
                         }
                     }
@@ -891,14 +900,42 @@ footer {
     }
 }
 
-@media(max-width:992px){
-    main{
-        .thirdSection .container{
-            .background{
-                height: 53vw;
-                .cardSwiper .swiper-wrapper .swiper-slide img{
+@media (max-width: 992px) {
+    main {
+        .firstSection .container {
+            span {
+                display: none;
+            }
+            .interduce .context {
+                margin-left: unset;
+                height: 34vw;
+                img {
+                    left: 0;
+                    width: 42vw;
+                }
+                .textBackground {
+                    top: 0;
+                    right: 0;
+                    left: unset;
+                    height: 28vw;
+                    p {
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 6;
+                        -webkit-box-orient: vertical;
+                    }
+                    .more {
+                        display: block;
+                    }
+                }
+                &:nth-child(4) {
+                    .textBackground {
+                        left: 0;
+                        right: unset;
+                    }
                 }
             }
-        } 
-    } 
+        }
+    }
 }
