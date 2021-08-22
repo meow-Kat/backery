@@ -1,18 +1,18 @@
 {
     "success": "true",
     "records": {
-        "datasetDescription": "新聞",
+        "datasetDescription": "Product",
 	"product": [
 	    {
-		"product_type": "鳳梨酥",
+		"product_type": "限定",
 		"product_details":[
 		    {
 			"name": "鹹鳳梨酥禮盒裝18顆",
 			"pic": "https://www.dawncake.com.tw/images/detailed/3/%E9%B9%B9%E9%B3%B3%E6%A2%A8%E9%85%A5%E7%A6%AE%E7%9B%92%E8%A3%9D-%E6%AD%A3%E9%9D%A2.png",
 			"price": "$450",
-			"date": "含寄出日至少12天",
+			"date": "",
 			"ingredient": "2號鳳梨、麵粉、天然奶油、糖、蛋、乳酪、麥芽糖、海藻糖、奶粉、鹽",
-			"link": "https://www.dawncake.com.tw/%E5%96%9C%E9%A4%85-%E5%BD%8C%E6%9C%88%E7%A6%AE%E7%9B%92/bridal-cakes-gift-box/dawncake-wedding-cakes/%E9%B9%B9%E9%B3%B3%E6%A2%A8%E9%85%A5%E7%A6%AE%E7%9B%92/"
+			"link": ""
 		    },
 		    {
 			"name": "土鳳梨酥禮盒裝18顆",
