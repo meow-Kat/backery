@@ -1,8 +1,7 @@
 let more = document.querySelectorAll('.more')
-console.log(more);
 more.forEach(element => {
     element.addEventListener('click', function () {
-        console.log(element.previousSibling.previousSibling);
+        console.log(element.parentNode.childNodes);
         element.previousSibling.previousSibling.style.height = '37vw'
         element.previousSibling.previousSibling.style.overflow = 'auto'
         element.style.display = 'none'
