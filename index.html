@@ -492,27 +492,7 @@
     <!-- 1st Read more button -->
     <script src="./js/moreButton.js"></script>
     <!-- 3rd Modal -->
-    <script>
-        let modal = document.querySelector('.modal')
-        let newsBtn = document.querySelectorAll('.newsBtn')
-        let close = document.querySelector('.close')
-        newsBtn.forEach( element => {
-            element.onclick = function () {
-                modal.classList.add('show')
-            }
-        });
-        close.onclick = function () {
-            modal.classList.remove('show')
-        }
-        modal.addEventListener('click',function () {
-            let modalBord = document.querySelector('.modalBord')
-            modalBord.onclick = (event) =>{
-                event.stopPropagation()
-            }
-            modal.classList.remove('show')
-        })
-
-    </script>
+    <script src="./js/modal.js"></script>
     <!-- 6th Contain Us button + animation -->
     <script src="./js/contain_us_button.js"></script>
 
