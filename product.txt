@@ -7,13 +7,13 @@
 		"product_type": "限定",
 		"product_details":[
 		    {
+			"id": "1",
 			"name": "聖誕新年限定水果麵包（Panettone）",
 			"pic": "",
 			"price": "$360",
 			"date": "",
 			"directions": "使用自家培養酵母發酵，並分三天分段製程，15小時低溫發酵而成。不同以往只有果乾的風味，陳耀訓・麵包埠將巧克力及大湖草莓乾融入Panettone當中，集甜、酸、香於一身。",
 			"link": ""
-			"id": "1"
 		    }
 		]
 	    },
@@ -21,6 +21,7 @@
 		"product_type": "禮盒",
 		"product_details":[
 		    {
+			"id": "2",
 			"name": "蛋黃酥禮盒",
 			"pic": "",
 			"price": "$730",
@@ -29,6 +30,7 @@
 			"link": ""
 		    },
 		    {
+			"id": "4",
 			"name": "酥心糖禮盒",
 			"pic": "",
 			"price": "$477",
@@ -42,6 +44,7 @@
 		"product_type": "經典",
 		"product_details":[
 		    {
+			"id": "3",
 			"name": "經典可頌",
 			"pic": "",
 			"price": "$48",
@@ -50,6 +53,7 @@
 			"link": ""
 		    },
 		    {
+			"id": "5",
 			"name": "鹹蛋黃可頌",
 			"pic": "",
 			"price": "$55",
@@ -57,7 +61,8 @@
 			"directions": "紅土鹹鴨蛋/杏仁餡",
 			"link": ""
 		    },
-{
+			{
+			"id": "6",
 			"name": "魯邦麵包",
 			"pic": "",
 			"price": "$48",
