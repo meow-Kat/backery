@@ -58,13 +58,13 @@ body {
   position: fixed;
   width: 100%;
   height: 100vh;
+  display: none;
 }
 
 .modal .modalBord {
   width: 50vw;
   min-width: 550px;
   height: 80%;
-  height: auto;
   background-color: ghostwhite;
   position: absolute;
   top: 50%;
@@ -72,11 +72,17 @@ body {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   border-radius: 2vw 0 2vw 2vw;
+  max-height: -webkit-max-content;
+  max-height: -moz-max-content;
+  max-height: max-content;
+  overflow-y: auto;
 }
 
 .modal .modalBord .close {
-  width: 60px;
-  height: 60px;
+  width: 3vw;
+  min-width: 30px;
+  height: 3vw;
+  min-height: 30px;
   margin-left: auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -92,7 +98,8 @@ body {
 
 .modal .modalBord .close::before, .modal .modalBord .close::after {
   content: "";
-  width: 60px;
+  width: 3vw;
+  min-width: 30px;
   height: 1px;
   border: 1px solid #564d4d;
   background-color: #564d4d;
@@ -104,13 +111,6 @@ body {
 .modal .modalBord .close::after {
   -webkit-transform: rotate(135deg);
           transform: rotate(135deg);
-}
-
-.modal .modalBord .container .context {
-  max-height: -webkit-max-content;
-  max-height: -moz-max-content;
-  max-height: max-content;
-  overflow-y: auto;
 }
 
 .modal .modalBord .container .context img {
@@ -165,11 +165,15 @@ body {
   padding: 30px 0;
 }
 
+.modal.show {
+  display: block;
+}
+
 nav .menu {
   position: fixed;
   right: 43px;
   top: 43px;
-  z-index: 100;
+  z-index: 99;
   width: 6.9vw;
   min-width: 60px;
   height: 6.9vw;
@@ -566,12 +570,12 @@ main .secondSection-group .secondSection .container .background div:nth-child(1)
   margin: 0 13px;
 }
 
-main .secondSection-group .secondSection .container .background div:nth-child(1) .text a {
+main .secondSection-group .secondSection .container .background div:nth-child(1) .text .link {
   margin-top: 2.2vw;
   margin-left: auto;
 }
 
-main .secondSection-group .secondSection .container .background div:nth-child(1) .text a span {
+main .secondSection-group .secondSection .container .background div:nth-child(1) .text .link span {
   margin-right: 14px;
 }
 
@@ -730,11 +734,11 @@ main .secondSection-group .secondSection-swiper .newsSwiper .swiper-wrapper .swi
   -webkit-box-orient: vertical;
 }
 
-main .secondSection-group .secondSection-swiper .newsSwiper .swiper-wrapper .swiper-slide .text a {
+main .secondSection-group .secondSection-swiper .newsSwiper .swiper-wrapper .swiper-slide .text .link {
   margin-left: calc(100% - 134px);
 }
 
-main .secondSection-group .secondSection-swiper .newsSwiper .swiper-wrapper .swiper-slide .text a span {
+main .secondSection-group .secondSection-swiper .newsSwiper .swiper-wrapper .swiper-slide .text .link span {
   font-size: 16px;
   font-weight: bold;
   margin-right: 14px;
