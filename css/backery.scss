@@ -57,7 +57,7 @@ body {
     height: 100vh;
     .modalBord {
         width: 50vw;
-        min-width: 960px;
+        min-width: 550px;
         height: 80%;
         height: auto;
         background-color: ghostwhite;
@@ -92,6 +92,7 @@ body {
             .context{
                 max-height: max-content;
                 overflow-y: auto;
+                // height: 70vw;
                 img{
                     width: 100%;
                     margin-bottom: 10px;

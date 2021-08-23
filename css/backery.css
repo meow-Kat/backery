@@ -62,7 +62,7 @@ body {
 
 .modal .modalBord {
   width: 50vw;
-  min-width: 960px;
+  min-width: 550px;
   height: 80%;
   height: auto;
   background-color: ghostwhite;
