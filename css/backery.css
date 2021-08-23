@@ -58,7 +58,9 @@ nav .menu {
   top: 43px;
   z-index: 100;
   width: 6.9vw;
+  min-width: 60px;
   height: 6.9vw;
+  min-height: 60px;
   border: 5px solid #ffd3ce;
   background-color: #fff;
   color: #a38634;
@@ -782,6 +784,7 @@ main .thirdSection .container .background .cardSwiper .swiper-wrapper .swiper-sl
 }
 
 main .thirdSection .container .background .cardSwiper .swiper-wrapper .swiper-slide img {
+  min-width: 234px;
   width: 22vw;
   border-radius: 5px;
 }
@@ -1236,6 +1239,12 @@ footer .container .backTop {
   main .firstSection .container .interduce .context:nth-child(4) .textBackground {
     left: 0;
     right: unset;
+  }
+  main .thirdSection .container .background .cardSwiper .swiper-wrapper .swiper-slide .text span {
+    width: 186px;
+  }
+  main .thirdSection .container .background .cardSwiper .swiper-wrapper .swiper-slide .text h6 {
+    width: 186px;
   }
   main .fourthSection .container .img-group img:nth-child(1), main .fourthSection .container .img-group img:nth-child(2n + 1) {
     right: 0;

@@ -56,7 +56,9 @@ nav {
         top: 43px;
         z-index: 100;
         width: 6.9vw;
+        min-width: 60px;
         height: 6.9vw;
+        min-height: 60px;
         border: 5px solid $pink;
         background-color: #fff;
         color: $logoBrown;
@@ -413,7 +415,7 @@ main {
                     .swiper-slide {
                         width: auto !important;
                         background-color: $yellow;
-                        &:nth-child(1){
+                        &:nth-child(1) {
                             display: none;
                         }
                         .photo {
@@ -574,7 +576,6 @@ main {
                         align-items: center;
                         .swiper-slide {
                             width: auto !important;
-                            // min-width: 234px;
                             border-radius: 5px 5px 0 0;
                             background-color: $yellow;
                             filter: blur(5px);
@@ -584,6 +585,7 @@ main {
                                 background-image: none;
                             }
                             img {
+                                min-width: 234px;
                                 width: 22vw;
                                 border-radius: 5px;
                             }
@@ -942,20 +944,32 @@ footer {
                 }
             }
         }
-        .fourthSection .container .img-group{
-            img{
-                &:nth-child(1),&:nth-child(2n + 1) {
+        .thirdSection .container .background .cardSwiper .swiper-wrapper .swiper-slide {
+            .text {
+                span{
+                    width: 186px;
+                }
+                h6{
+                    width: 186px;
+                }
+            }
+        }
+        .fourthSection .container .img-group {
+            img {
+                &:nth-child(1),
+                &:nth-child(2n + 1) {
                     right: 0;
                 }
-                &:nth-child(2),&:nth-child(4) {
+                &:nth-child(2),
+                &:nth-child(4) {
                     left: 0;
                 }
             }
         }
-        .fifthSection .container .iframe img{
+        .fifthSection .container .iframe img {
             width: 62vw;
         }
-        .sixthSection .container .containUs div{
+        .sixthSection .container .containUs div {
             width: 36vw;
             height: 36vw;
         }
@@ -963,19 +977,19 @@ footer {
 }
 
 @media (max-width: 820px) {
-    main .secondSection-group{
-        .secondSection{
+    main .secondSection-group {
+        .secondSection {
             display: none;
         }
-        .secondSection-swiper{
-            h1{
+        .secondSection-swiper {
+            h1 {
                 display: block;
             }
-            .newsSwiper .swiper-wrapper .swiper-slide{
-                &:nth-child(1){
+            .newsSwiper .swiper-wrapper .swiper-slide {
+                &:nth-child(1) {
                     display: block;
                 }
             }
-        }  
-    } 
+        }
+    }
 }
