@@ -792,7 +792,7 @@ main .thirdSection .container .background .cardSwiper .swiper-wrapper .swiper-sl
 }
 
 main .thirdSection .container .background .cardSwiper .swiper-wrapper .swiper-slide .text span {
-  width: 17vw;
+  width: calc(22vw - 48px);
   display: block;
   margin-top: 10px;
   color: #823d08;
@@ -805,6 +805,7 @@ main .thirdSection .container .background .cardSwiper .swiper-wrapper .swiper-sl
 }
 
 main .thirdSection .container .background .cardSwiper .swiper-wrapper .swiper-slide .text h6 {
+  width: calc(22vw - 48px);
   margin-top: 10px;
 }
 
