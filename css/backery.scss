@@ -526,7 +526,9 @@ main {
                             align-items: center;
                             padding-right: 1vw;
                             width: 9vw;
+                            min-width: 84px;
                             height: 4.7vw;
+                            min-height: 42px; 
                             background-color: $pink;
                             color: $brownDark;
                             border-radius: 1.5vw 1.5vw 0 0;
@@ -535,6 +537,7 @@ main {
                             border: 3px solid $brownDark;
                             border-bottom: none;
                             transition-duration: 0s;
+                            font-size: 18px;
                         }
                         &:hover {
                             color: $orange;
@@ -903,11 +906,34 @@ footer {
             display: grid;
             justify-content: center;
             align-items: flex-end;
+            a{
+                svg{
+                    width: 100%;
+                }
+            }
         }
     }
 }
 
 @media (max-width: 992px) {
+    h1{
+        font-size: 32px;
+    }
+    h2{
+        font-size: 24px;
+    }
+    h3{
+        font-size: 22px;
+    }
+    h4{
+        font-size: 20px;
+    }
+    h5{
+        font-size: 18px;
+    }
+    h6{
+        font-size: 16px;
+    } 
     main {
         .firstSection .container {
             span {
