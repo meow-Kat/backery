@@ -4,6 +4,7 @@ let close = document.querySelector('.close')
 newsBtn.forEach(element => {
     element.onclick = function () {
         modal.classList.add('show')
+        
     }
 });
 close.onclick = function () {
