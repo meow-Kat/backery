@@ -52,6 +52,119 @@ body {
   width: 100%;
 }
 
+.modal {
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+}
+
+.modal .modalBord {
+  width: 50vw;
+  min-width: 960px;
+  height: 80%;
+  height: auto;
+  background-color: ghostwhite;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-radius: 2vw 0 2vw 2vw;
+}
+
+.modal .modalBord .close {
+  width: 60px;
+  height: 60px;
+  margin-left: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.modal .modalBord .close::before, .modal .modalBord .close::after {
+  content: "";
+  width: 60px;
+  height: 1px;
+  border: 1px solid #564d4d;
+  background-color: #564d4d;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  position: absolute;
+}
+
+.modal .modalBord .close::after {
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+}
+
+.modal .modalBord .container .context {
+  max-height: -webkit-max-content;
+  max-height: -moz-max-content;
+  max-height: max-content;
+  overflow-y: auto;
+}
+
+.modal .modalBord .container .context img {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.modal .modalBord .container .context .hashTag {
+  padding: 10px;
+  border-top: 2px solid #603210;
+  border-bottom: 2px solid #603210;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.modal .modalBord .container .context .hashTag a {
+  width: 76px;
+  height: 27px;
+  margin-left: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #823d08;
+  border: 2px solid #823d08;
+}
+
+.modal .modalBord .container .context .hashTag a span {
+  color: #fff;
+  font-size: 12px;
+}
+
+.modal .modalBord .container .context .hashTag a:nth-child(1) {
+  margin-left: unset;
+}
+
+.modal .modalBord .container .context .hashTag a:hover {
+  background-color: #fff;
+}
+
+.modal .modalBord .container .context .hashTag a:hover span {
+  color: #823d08;
+}
+
+.modal .modalBord .container .context p {
+  padding: 30px 0;
+}
+
 nav .menu {
   position: fixed;
   right: 43px;
