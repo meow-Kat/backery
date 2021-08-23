@@ -22,8 +22,7 @@
 <body>
     <div class="modal">
         <div class="modalBord">
-            <div class="close">
-            </div>
+            <div class="close"></div>
             <div class="container">
                 <div class="context">
                     <img src="./img/2nd-img1.png" alt="">
@@ -496,12 +495,18 @@
     <script>
         let modal = document.querySelector('.modal')
         let newsBtn = document.querySelectorAll('.newsBtn')
+        let close = document.querySelector('.close')
         newsBtn.forEach( element => {
             element.onclick = function () {
-                modal.classList.add('')
+                modal.classList.add('show')
             }
-            
         });
+        close.onclick = function () {
+            modal.classList.remove('show')
+        }
+        modal.onclick = function () {
+            modal.classList.remove('show')
+        }
     </script>
     <!-- 6th Contain Us button + animation -->
     <script src="./js/contain_us_button.js"></script>
