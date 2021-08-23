@@ -41,36 +41,28 @@
 		"product_type": "經典",
 		"product_details":[
 		    {
-			"name": "蛋黃酥禮盒",
+			"name": "經典可頌",
 			"pic": "",
-			"price": "$360",
+			"price": "$48",
 			"date": "",
-			"directions": "世界麵包大賽冠軍出品，掀起蛋黃酥風潮，2021年風味再升級",
+			"directions": "丹麥LURPAK奶油",
 			"link": ""
 		    },
 		    {
-			"name": "52%澳洲胡桃海鹽卡雅碧",
-			"pic": "https://www.dawncake.com.tw/images/detailed/1/%E6%A8%B9%E7%9A%AE%E5%B7%A7%E5%85%8B%E5%8A%9B_52_%E6%BE%B3%E6%B4%B2%E8%83%A1%E6%A1%83%E6%B5%B7%E9%B9%BD%E5%8D%A1%E9%9B%85%E7%A2%A7.jpg",
-			"price": "$480",
-			"date": "含寄出日至少20天",
-			"ingredient": "Michel Cluizel 45% Kayambe milk、澳洲胡桃、海鹽、可可膏",
-			"link": "https://www.dawncake.com.tw/chocolates/chocolate-bark/52/"
+			"name": "鹹蛋黃可頌",
+			"pic": "",
+			"price": "$55",
+			"date": "",
+			"directions": "紅土鹹鴨蛋/杏仁餡",
+			"link": ""
 		    },
-		    {
-			"name": "35%草莓白巧克力",
-			"pic": "https://www.dawncake.com.tw/images/detailed/1/%E6%A8%B9%E7%9A%AE%E5%B7%A7%E5%85%8B%E5%8A%9B_35_%E8%8D%89%E8%8E%93%E7%99%BD%E5%B7%A7%E5%85%8B%E5%8A%9B.jpg",
-			"price": "$480",
-			"date": "含寄出日至少20天",
-			"ingredient": "Valrhona 35% Ivoire、草莓",
-			"link": "https://www.dawncake.com.tw/chocolates/chocolate-bark/35/"
-		    },
-		    {
-			"name": "32%布袋鹽花杏仁杜絲",
-			"pic": "https://www.dawncake.com.tw/images/detailed/1/%E6%A8%B9%E7%9A%AE%E5%B7%A7%E5%85%8B%E5%8A%9B-32_%E5%B8%83%E8%A2%8B%E9%B9%BD%E8%8A%B1%E6%9D%8F%E4%BB%81%E6%9D%9C%E7%B5%B2.jpg",
-			"price": "$480",
-			"date": "含寄出日至少20天",
-			"ingredient": "Valrhona 32%Dulcey, 35%Ivoire、糖、杏仁、麵粉、天然奶油、奶粉、蛋、布袋鹽花",
-			"link": "https://www.dawncake.com.tw/chocolates/chocolate-bark/32/"
+{
+			"name": "魯邦麵包",
+			"pic": "",
+			"price": "$48",
+			"date": "",
+			"directions": "天然酵母麵包/黑白芝麻/核桃",
+			"link": ""
 		    },
 		]
 	    },
