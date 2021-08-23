@@ -504,9 +504,14 @@
         close.onclick = function () {
             modal.classList.remove('show')
         }
-        modal.onclick = function () {
+        modal.addEventListener('click',function () {
+            let modalBord = document.querySelector('.modalBord')
+            modalBord.onclick = (event) =>{
+                event.stopPropagation()
+            }
             modal.classList.remove('show')
-        }
+        })
+
     </script>
     <!-- 6th Contain Us button + animation -->
     <script src="./js/contain_us_button.js"></script>

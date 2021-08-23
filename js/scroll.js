@@ -3,6 +3,7 @@ function scrollHander() {
     let windowBottom = windowTop + window.innerHeight
 
     // menu
+    let menu = document.querySelector('.menu')
     let firstSection = document.querySelector('.firstSection').offsetTop
     if (window.scrollY > firstSection) {
         menu.classList.add('show')
