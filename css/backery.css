@@ -1413,6 +1413,10 @@ footer .container .backTop a svg {
   }
   main .secondSection-group .secondSection-swiper .newsSwiper .swiper-wrapper .swiper-slide:nth-child(1) {
     display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    display: flex;
   }
 }
 /*# sourceMappingURL=backery.css.map */

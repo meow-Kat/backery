@@ -46,7 +46,7 @@ body {
 }
 .anchor {
     width: 100%;
-} 
+}
 
 .modal {
     z-index: 100;
@@ -1104,6 +1104,8 @@ footer {
             .newsSwiper .swiper-wrapper .swiper-slide {
                 &:nth-child(1) {
                     display: block;
+                    display: flex;
+                    display: flex;
                 }
             }
         }
