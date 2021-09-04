@@ -779,6 +779,7 @@ main .thirdSection .container .background {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
+  overflow: hidden;
 }
 
 main .thirdSection .container .background ul {

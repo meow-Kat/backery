@@ -1,8 +1,8 @@
 {
     "success": "true",
     "records": {
-        "datasetDescription": "news",
-	"news": [
+        "datasetDescription": "products",
+	"products": [
 	    {
 		"product_type": "限定",
 		"product_details":[
