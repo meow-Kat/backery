@@ -1,3 +1,4 @@
+{
 let form = document.querySelector('.form')
 let contain_us = document.querySelector('.contain-us-box')
 let join_family = document.querySelector('.join-family-box')
@@ -13,3 +14,4 @@ function active() {
 }
 contain_us.addEventListener('click', active)
 join_family.addEventListener('click', active)
+}

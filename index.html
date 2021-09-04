@@ -488,32 +488,41 @@
         //     price = this.price
         //     directions = this.directions
         // }
+        try {
+            const res = fetch('https://github.com/meow-Kat/backery/blob/main/product.html', {
+                mode: 'no-cors',
+                headers: {
+                    "Content-Type": "application/json",
+                }
+            })
+            if (res.ok) {
+                res.json().then(data => data)
+            } else {
+                console.log(res)
+            }
 
-        fetch('https://github.com/meow-Kat/backery/blob/main/product.json')
-            .then(function (response) {
-                return response.json();
-            }).then(function (myJson) {
-                console.log(myJson);
-            });
-
+        } catch (err) {
+            console.log(err)
+        }
+        
     </script>
 
     <!-- scrolling -->
-    <script src="./js/scroll.js"></script>
+    <!-- <script src="./js/scroll.js"></script> -->
     <!-- swiper js -->
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="./js/swiper.js"></script>
+    <!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
+    <!-- <script src="./js/swiper.js"></script> -->
     <!-- AOS js -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script> AOS.init();</script>
+    <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
+    <!-- <script> AOS.init();</script> -->
     <!-- menu button -->
-    <script src="./js/menu.js"></script>
+    <!-- <script src="./js/menu.js"></script> -->
     <!-- 1st Read more button -->
-    <script src="./js/moreButton.js"></script>
+    <!-- <script src="./js/moreButton.js"></script> -->
     <!-- 3rd Modal -->
-    <script src="./js/modal.js"></script>
+    <!-- <script src="./js/modal.js"></script> -->
     <!-- 6th Contain Us button + animation -->
-    <script src="./js/contain_us_button.js"></script>
+    <!-- <script src="./js/contain_us_button.js"></script> -->
 
 </body>
 

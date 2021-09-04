@@ -1,3 +1,4 @@
+{
 let more = document.querySelectorAll('.more')
 more.forEach(element => {
     element.addEventListener('click', function () {
@@ -9,3 +10,4 @@ more.forEach(element => {
         element.parentNode.parentNode.style.height = '53vw'
     })
 });
+}
