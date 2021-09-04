@@ -477,6 +477,26 @@
             </div>
         </div>
     </footer>
+    <!-- product fetch -->
+    <script>
+
+        // function product(product_type, id, name, pic, price, directions) {
+        //     product_type = this.product_type
+        //     id = this.id
+        //     name = this.name
+        //     pic = this.pic
+        //     price = this.price
+        //     directions = this.directions
+        // }
+
+        fetch('https://github.com/meow-Kat/backery/blob/main/product.json')
+            .then(function (response) {
+                return response.json();
+            }).then(function (myJson) {
+                console.log(myJson);
+            });
+
+    </script>
 
     <!-- scrolling -->
     <script src="./js/scroll.js"></script>
@@ -494,27 +514,7 @@
     <script src="./js/modal.js"></script>
     <!-- 6th Contain Us button + animation -->
     <script src="./js/contain_us_button.js"></script>
-    <!-- product fetch -->
-    <script defer>
 
-        function product(product_type, id, name, pic, price, directions) {
-            product_type = this.product_type
-            id = this.id
-            name = this.name
-            pic = this.pic
-            price = this.price
-            directions = this.directions
-        }
-
-        fetch('https://github.com/meow-Kat/backery/blob/main/product.html')
-            .then(function (response) {
-                return response.json();
-            }).then(function (myJson) {
-                console.log(myJson);
-            });
-
-
-    </script>
 </body>
 
 </html>
