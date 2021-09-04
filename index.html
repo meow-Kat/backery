@@ -100,8 +100,7 @@
         <div id="anchor-top" class="anchor"></div>
         <div class="banner">
             <iframe src="https://www.youtube.com/embed/RDs0WEA84_o?mute=1&autoplay=1" title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; "
+                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; "
                 allowfullscreen></iframe>
         </div>
         <div id="anchor1" class="anchor"></div>
@@ -496,9 +495,9 @@
     <!-- 6th Contain Us button + animation -->
     <script src="./js/contain_us_button.js"></script>
     <!-- product fetch -->
-    <script>
+    <script defer>
 
-        function product(product_type, id , name , pic , price , directions) {
+        function product(product_type, id, name, pic, price, directions) {
             product_type = this.product_type
             id = this.id
             name = this.name
@@ -507,7 +506,14 @@
             directions = this.directions
         }
 
-        fetch('https://github.com/meow-Kat/backery/blob/main/product.txt')
+        fetch('https://github.com/meow-Kat/backery/blob/main/product.html')
+            .then(function (response) {
+                return response.json();
+            }).then(function (myJson) {
+                console.log(myJson);
+            });
+
+
     </script>
 </body>
 
