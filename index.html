@@ -341,14 +341,14 @@
                 <h1 data-aos="fade-down">麵包 ◌ 埠</h1>
                 <div class="background">
                     <ul>
-                        <li><a href="" class="filter">- 全部</a></li>
-                        <li><a href="" class="filter">- 限定</a></li>
-                        <li><a href="" class="filter">- 禮盒</a></li>
-                        <li><a href="" class="filter">- 經典</a></li>
+                        <li><a href="" class="filter allFilter">- 全部</a></li>
+                        <li><a href="" class="filter typeFilter">- 限定</a></li>
+                        <li><a href="" class="filter typeFilter">- 禮盒</a></li>
+                        <li><a href="" class="filter typeFilter">- 經典</a></li>
                     </ul>
                     <div class="swiper-container cardSwiper">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
+                        <div class="swiper-wrapper productSwiper">
+                            <!-- <div class="swiper-slide">
                                 <img src="./img/3rd-img1.png" alt="">
                                 <div class="text">
                                     <span>經典</span>
@@ -374,7 +374,7 @@
                                     <span>天然酵母麵包/黑白芝麻/核桃</span>
                                     <h6>$ 48</h6>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -486,30 +486,45 @@
             .then(function (response) {
                 return response.json();
             }).then(function (Products) {
-
-                // function product(product_type, id, name, pic, price, directions) {
-                //     product_type = this.product_type
+                // 建構子
+                // function product( type, id , name , pic , price , directions) {
+                //     type = this.type
                 //     id = this.id
                 //     name = this.name
                 //     pic = this.pic
                 //     price = this.price
                 //     directions = this.directions
                 // }
-                // console.log(Products);
 
+                // var all_card = []
+
+                // 所有類別陣列
                 const products = Products.records.products
-                products.forEach(e => {
-                    const type = e.product_type
-                    console.log(e.product_details);
-                    e.product_details.forEach( i => {
-                        const id = i[0]
-                        const name = i[1]
-                        const pic = i[2]
-                        const price = i[3]
-                        const directions = i[5]
+                // e 單類別陣列
+                products.forEach(function (element, index) {
+                    // 大類別文字
+                    const type = products[index].product_type
+                    // console.log(type);
+                    element.product_details.forEach(function (i, indx) {
+
+                        // 物件導向
+                        // all_card[indx] = new product( products[index].product_type , i.id , i.name , i.pic , i.price , i.directions)
+                        // console.log(products[1].product_details);
+
+                        let productSwiper = document.querySelector('.productSwiper')
+
+                        productSwiper.innerHTML +=
+                            `<div class="swiper-slide">
+                        <img src="${products[index].product_details[indx].pic}" alt="">
+                        <div class="text">
+                            <span>${products[index].product_type}</span>
+                            <h6>${products[index].product_details[indx].name}</h6>
+                            <span>${products[index].product_details[indx].price}</span>
+                            <h6>${products[index].product_details[indx].directions}</h6>
+                        </div>
+                    </div>`
                     })
                 });
-
 
             })
 

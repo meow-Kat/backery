@@ -13,7 +13,7 @@
         grabCursor: true,
         centeredSlides: true,
         slidesPerView: "auto",
-        loop: true,
+        // loop: true,
         coverflowEffect: {
             rotate: 0,
             stretch: 0,
