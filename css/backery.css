@@ -753,6 +753,7 @@ main .thirdSection {
 
 main .thirdSection .container {
   position: relative;
+  padding: unset;
 }
 
 main .thirdSection .container h1 {
@@ -779,7 +780,6 @@ main .thirdSection .container .background {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
-  overflow: hidden;
 }
 
 main .thirdSection .container .background ul {
@@ -793,6 +793,7 @@ main .thirdSection .container .background ul {
   display: flex;
   -webkit-transform: translateY(calc(-100% - 4px));
           transform: translateY(calc(-100% - 4px));
+  visibility: visible;
 }
 
 main .thirdSection .container .background ul li {
