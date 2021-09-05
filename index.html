@@ -341,10 +341,18 @@
                 <h1 data-aos="fade-down">麵包 ◌ 埠</h1>
                 <div class="background">
                     <ul>
-                        <li><a href="" class="filter allFilter">- 全部</a></li>
-                        <li><a href="" class="filter typeFilter">- 限定</a></li>
-                        <li><a href="" class="filter typeFilter">- 禮盒</a></li>
-                        <li><a href="" class="filter typeFilter">- 經典</a></li>
+                        <li>
+                            <div class="filter allFilter">- 全部</div>
+                        </li>
+                        <li>
+                            <div class="filter typeFilter">- 限定</div>
+                        </li>
+                        <li>
+                            <div class="filter typeFilter">- 禮盒</div>
+                        </li>
+                        <li>
+                            <div class="filter typeFilter">- 經典</div>
+                        </li>
                     </ul>
                     <div class="swiper-container cardSwiper">
                         <div class="swiper-wrapper productSwiper">
@@ -502,36 +510,54 @@
                 const products = Products.records.products
 
                 // 要跟按鈕綁一起
+                // 全部的按鈕
                 const allFilter = document.querySelector('.allFilter')
-                const typeFilter = document.querySelectorAll('.typeFilter')
-                
+                // clearn();
+                allFilter.onclick = function () {
+                    show()
+                }
 
-                // e 單類別陣列
-                products.forEach(function (element, index) {
-                    // 大類別文字
-                    const type = products[index].product_type
-
-
-                    element.product_details.forEach(function (i, indx) {
-
-                        // 物件導向
-                        // all_card[indx] = new product( products[index].product_type , i.id , i.name , i.pic , i.price , i.directions)
-                        // console.log(products[1].product_details);
-
-                        let productSwiper = document.querySelector('.productSwiper')
-
-                        productSwiper.innerHTML +=
-                            `<div class="swiper-slide">
-                        <img src="${products[index].product_details[indx].pic}" alt="">
-                        <div class="text">
-                            <span>${products[index].product_type}</span>
-                            <h6>${products[index].product_details[indx].name}</h6>
-                            <span>${products[index].product_details[indx].price}</span>
-                            <h6>${products[index].product_details[indx].directions}</h6>
-                        </div>
-                    </div>`
+                // 篩選的按鈕
+                const typeFilters = document.querySelectorAll('.typeFilter')
+                typeFilters.forEach(function (filter, index) {
+                    typeFilters[index].addEventListener('click', function () {
+                        // clearn()
+                        console.log(index);
                     })
-                });
+                })
+
+                // 宣告插入位置
+                let productSwiper = document.querySelector('.productSwiper')
+                function show() {
+                    // element 單類別陣列
+                    products.forEach(function (element, index) {
+                        // 大類別文字
+                        const type = products[index].product_type
+
+                        element.product_details.forEach(function (i, indx) {
+
+                            // 物件導向
+                            // all_card[indx] = new product( products[index].product_type , i.id , i.name , i.pic , i.price , i.directions)
+                            // console.log(products[1].product_details);
+                            
+                            productSwiper.innerHTML +=
+                                `<div class="swiper-slide">
+                            <img src="${products[index].product_details[indx].pic}" alt="">
+                            <div class="text">
+                                <span>${products[index].product_type}</span>
+                                <h6>${products[index].product_details[indx].name}</h6>
+                                <span>${products[index].product_details[indx].price}</span>
+                                <h6>${products[index].product_details[indx].directions}</h6>
+                            </div>
+                        </div>`
+                        })
+                    });
+                }
+                // 清除
+                function clearn() {
+                    productSwiper.innerHTML += ''
+                }
+                show()
 
             })
 
