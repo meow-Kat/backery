@@ -514,6 +514,7 @@
                 const allFilter = document.querySelector('.allFilter')
                 // clearn();
                 allFilter.onclick = function () {
+                    clearn()
                     show(4)
                 }
 
@@ -521,7 +522,7 @@
                 const typeFilters = document.querySelectorAll('.typeFilter')
                 typeFilters.forEach(function (filter, index) {
                     typeFilters[index].addEventListener('click', function () {
-                        // clearn()
+                        clearn()
                         show(index)
                     })
                 })
@@ -539,11 +540,12 @@
                             // 物件導向
                             // all_card[indx] = new product( products[index].product_type , i.id , i.name , i.pic , i.price , i.directions)
                             // console.log(products[1].product_details);
+                            console.log(x);
                             
                             if (x == 4) {
                                 productSwiper.innerHTML +=
                                 `<div class="swiper-slide">
-                                    <img src="${products[index].product_details[indx].pic}" alt="">
+                                    <img src="${products[index].product_details[indx].pic}" alt="pic">
                                     <div class="text">
                                         <span>${products[index].product_type}</span>
                                         <h6>${products[index].product_details[indx].name}</h6>
@@ -555,7 +557,7 @@
                             }else{
                                 productSwiper.innerHTML +=
                                 `<div class="swiper-slide">
-                                    <img src="${products[x].product_details[indx].pic}" alt="">
+                                    <img src="${products[x].product_details[indx].pic}" alt="pic">
                                     <div class="text">
                                         <span>${products[x].product_type}</span>
                                         <h6>${products[x].product_details[indx].name}</h6>
@@ -573,7 +575,7 @@
                 function clearn() {
                     productSwiper.innerHTML += ''
                 }
-                show(4)
+                show(0)
 
             })
 
