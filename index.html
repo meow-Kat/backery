@@ -500,12 +500,18 @@
 
                 // 所有類別陣列
                 const products = Products.records.products
+
+                // 要跟按鈕綁一起
+                const allFilter = document.querySelector('.allFilter')
+                const typeFilter = document.querySelectorAll('.typeFilter')
+                
+
                 // e 單類別陣列
-                products.forEach(function (element, index ) {
+                products.forEach(function (element, index) {
                     // 大類別文字
                     const type = products[index].product_type
 
-                    // 要跟按鈕綁一起
+
                     element.product_details.forEach(function (i, indx) {
 
                         // 物件導向
