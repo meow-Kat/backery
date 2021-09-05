@@ -487,9 +487,6 @@
     </footer>
     <!-- product fetch -->
     <script>
-
-
-
         fetch('https://raw.githubusercontent.com/meow-Kat/backery/main/product.html')
             .then(function (response) {
                 return response.json();
@@ -527,60 +524,59 @@
                     })
                 })
 
+                // 物件導向
+                // all_card[indx] = new product( products[index].product_type , i.id , i.name , i.pic , i.price , i.directions)
+                // console.log(products[1].product_details);
+
                 // 宣告插入位置
                 let productSwiper = document.querySelector('.productSwiper')
-                function show(x) {
-                    // element 單類別陣列
-                    products.forEach(function (element, index) {
-                        // 大類別文字
-                        const type = products[index].product_type
-
-                        element.product_details.forEach(function (i, indx) {
-
-                            // 物件導向
-                            // all_card[indx] = new product( products[index].product_type , i.id , i.name , i.pic , i.price , i.directions)
-                            // console.log(products[1].product_details);
-                            console.log(x);
-                            
-                            if (x == 4) {
-                                productSwiper.innerHTML +=
-                                `<div class="swiper-slide">
-                                    <img src="${products[index].product_details[indx].pic}" alt="pic">
-                                    <div class="text">
-                                        <span>${products[index].product_type}</span>
-                                        <h6>${products[index].product_details[indx].name}</h6>
-                                        <span>${products[index].product_details[indx].price}</span>
-                                        <h6>${products[index].product_details[indx].directions}</h6>
-                                    </div>
-                                </div>`
-                                
-                            }else{
-                                productSwiper.innerHTML +=
-                                `<div class="swiper-slide">
-                                    <img src="${products[x].product_details[indx].pic}" alt="pic">
-                                    <div class="text">
-                                        <span>${products[x].product_type}</span>
-                                        <h6>${products[x].product_details[indx].name}</h6>
-                                        <span>${products[x].product_details[indx].price}</span>
-                                        <h6>${products[x].product_details[indx].directions}</h6>
-                                    </div>
-                                </div>`
-                                console.log(x);
-                            }
-
-                        })
-                    });
-                }
                 // 清除
                 function clearn() {
-                    productSwiper.innerHTML += ''
+                    productSwiper.innerHTML = ''
                 }
-                show(0)
+                function show(x) {
+                    if (x == 4) {
+                        // element 單類別陣列
+                        products.forEach(function (element, index) {
+                            // 大類別文字
+                            const type = products[index].product_type
+                            element.product_details.forEach(function (i, indx) {
 
+                                productSwiper.innerHTML +=
+                                    `<div class="swiper-slide">
+                                        <img src="${products[index].product_details[indx].pic}" alt="pic">
+                                        <div class="text">
+                                            <span>${products[index].product_type}</span>
+                                            <h6>${products[index].product_details[indx].name}</h6>
+                                            <span>${products[index].product_details[indx].price}</span>
+                                            <h6>${products[index].product_details[indx].directions}</h6>
+                                        </div>
+                                    </div>`
+
+
+                            })
+                        });
+                    } else {
+                        const type = products[x].product_type
+                        // console.log(type);
+                        products[x].product_details.forEach(function (i, indx) {
+                            productSwiper.innerHTML +=
+                                `<div class="swiper-slide">
+                                        <img src="${products[x].product_details[indx].pic}" alt="pic">
+                                        <div class="text">
+                                            <span>${products[x].product_type}</span>
+                                            <h6>${products[x].product_details[indx].name}</h6>
+                                            <span>${products[x].product_details[indx].price}</span>
+                                            <h6>${products[x].product_details[indx].directions}</h6>
+                                    </div>
+                                </div>`
+                        })
+                    }
+                }
+                show(4)
             })
 
     </script>
-
     <!-- scrolling -->
     <script src="./js/scroll.js"></script>
     <!-- swiper js -->
