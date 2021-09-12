@@ -749,6 +749,7 @@ main .secondSection-group .secondSection-swiper .newsSwiper .swiper-wrapper .swi
 main .thirdSection {
   margin-top: 65px;
   margin-bottom: 138px;
+  padding: 0 40px;
 }
 
 main .thirdSection .container {
@@ -880,6 +881,7 @@ main .thirdSection .container .background ul li:nth-child(4) {
 main .thirdSection .container .background .cardSwiper {
   padding: 1% 0;
   margin: 0 1%;
+  overflow: hidden;
 }
 
 main .thirdSection .container .background .cardSwiper .swiper-wrapper {

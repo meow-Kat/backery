@@ -578,6 +578,7 @@ main {
     .thirdSection {
         margin-top: 65px;
         margin-bottom: 138px;
+        padding: 0 40px;
         .container {
             position: relative;
             padding: unset;
@@ -667,6 +668,7 @@ main {
                 .cardSwiper {
                     padding: 1% 0;
                     margin: 0 1%;
+                    overflow: hidden;
                     .swiper-wrapper {
                         display: flex;
                         align-items: center;
