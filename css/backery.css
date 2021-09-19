@@ -71,7 +71,7 @@ body {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  border-radius: 2vw 0 2vw 2vw;
+  border-radius: 2vw 0 0 2vw;
   max-height: -webkit-max-content;
   max-height: -moz-max-content;
   max-height: max-content;
@@ -272,7 +272,14 @@ nav .menuList ul li a span {
   color: #a38634;
 }
 
+nav .menuList ul li a:hover {
+  font-weight: bold;
+  -webkit-transition: 0s;
+  transition: 0s;
+}
+
 nav .menuList .social {
+  width: 202px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -296,9 +303,22 @@ nav .menuList .social .link {
           align-items: flex-end;
 }
 
+nav .menuList .social .link:hover {
+  -webkit-filter: hue-rotate(270deg);
+          filter: hue-rotate(270deg);
+}
+
 nav .open {
   height: 100vh;
   padding: 3.5vw 180px;
+}
+
+nav .menu.active {
+  z-index: 100;
+}
+
+nav .menu.show:hover span {
+  font-size: 1.5vw;
 }
 
 main {
@@ -416,20 +436,16 @@ main .firstSection .container .interduce .context .textBackground {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-main .firstSection .container .interduce .context .textBackground p {
-  width: 30vw;
   font-size: 14px;
   font-family: Roboto;
   line-height: 20px;
   letter-spacing: 1px;
   color: #603210;
-  height: 11.5vw;
   max-height: -webkit-max-content;
   max-height: -moz-max-content;
   max-height: max-content;
   overflow: auto;
+  padding: 0 5vw;
 }
 
 main .firstSection .container .interduce .context .textBackground .text-group {
@@ -443,18 +459,6 @@ main .firstSection .container .interduce .context .textBackground .text-group p 
   margin-top: 30px;
 }
 
-main .firstSection .container .interduce .context .textBackground h5 {
-  position: absolute;
-  top: 0;
-  right: 10.5%;
-  -webkit-writing-mode: vertical-lr;
-      -ms-writing-mode: tb-lr;
-          writing-mode: vertical-lr;
-  letter-spacing: 5px;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-}
-
 main .firstSection .container .interduce .context .textBackground .more {
   position: absolute;
   display: block;
@@ -463,6 +467,19 @@ main .firstSection .container .interduce .context .textBackground .more {
   color: #823d08;
   cursor: pointer;
   display: none;
+}
+
+main .firstSection .container .interduce .context h5 {
+  position: absolute;
+  top: 0;
+  right: 10.5%;
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
+  letter-spacing: 5px;
+  top: 15%;
+  right: 12.5%;
+  z-index: 1;
 }
 
 main .firstSection .container .interduce .context:nth-child(4) {
@@ -482,7 +499,8 @@ main .firstSection .container .interduce .context:nth-child(4) .textBackground {
 
 main .firstSection .container .interduce .context:nth-child(4) h5 {
   right: unset;
-  left: 10.5%;
+  left: 19.5%;
+  top: 17.5%;
 }
 
 main .secondSection-group .secondSection {
@@ -574,10 +592,54 @@ main .secondSection-group .secondSection .container .background div:nth-child(1)
 main .secondSection-group .secondSection .container .background div:nth-child(1) .text .link {
   margin-top: 2.2vw;
   margin-left: auto;
+  cursor: pointer;
+  position: relative;
 }
 
 main .secondSection-group .secondSection .container .background div:nth-child(1) .text .link span {
   margin-right: 14px;
+}
+
+main .secondSection-group .secondSection .container .background div:nth-child(1) .text .link .light {
+  opacity: 0.8;
+  position: absolute;
+  background-color: #fff;
+  width: 10px;
+  height: 10px;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  border-radius: 50%;
+  display: none;
+}
+
+main .secondSection-group .secondSection .container .background div:nth-child(1) .text .link:hover {
+  color: #feb768;
+}
+
+main .secondSection-group .secondSection .container .background div:nth-child(1) .text .link:hover .light {
+  display: block;
+  -webkit-animation: light 1s infinite;
+          animation: light 1s infinite;
+}
+
+@-webkit-keyframes light {
+  0% {
+    right: 40px;
+  }
+  100% {
+    right: 0;
+  }
+}
+
+@keyframes light {
+  0% {
+    right: 40px;
+  }
+  100% {
+    right: 0;
+  }
 }
 
 main .secondSection-group .secondSection .container .background div:nth-child(2) {
@@ -737,6 +799,8 @@ main .secondSection-group .secondSection-swiper .newsSwiper .swiper-wrapper .swi
 
 main .secondSection-group .secondSection-swiper .newsSwiper .swiper-wrapper .swiper-slide .text .link {
   margin-left: calc(100% - 134px);
+  position: relative;
+  cursor: pointer;
 }
 
 main .secondSection-group .secondSection-swiper .newsSwiper .swiper-wrapper .swiper-slide .text .link span {
@@ -744,6 +808,39 @@ main .secondSection-group .secondSection-swiper .newsSwiper .swiper-wrapper .swi
   font-weight: bold;
   margin-right: 14px;
   color: #603210;
+}
+
+main .secondSection-group .secondSection-swiper .newsSwiper .swiper-wrapper .swiper-slide .text .link .light {
+  opacity: 0.8;
+  position: absolute;
+  background-color: #fff;
+  width: 10px;
+  height: 10px;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  border-radius: 50%;
+  display: none;
+}
+
+main .secondSection-group .secondSection-swiper .newsSwiper .swiper-wrapper .swiper-slide .text .link:hover span {
+  color: #feb768;
+}
+
+main .secondSection-group .secondSection-swiper .newsSwiper .swiper-wrapper .swiper-slide .text .link:hover .light {
+  display: block;
+  -webkit-animation: light 1s infinite;
+          animation: light 1s infinite;
+}
+
+@keyframes light {
+  0% {
+    right: 40px;
+  }
+  100% {
+    right: 0;
+  }
 }
 
 main .thirdSection {

@@ -65,7 +65,7 @@ body {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        border-radius: 2vw 0 2vw 2vw;
+        border-radius: 2vw 0 0 2vw;
         max-height: max-content;
         overflow-y: auto;
         .close {
@@ -219,10 +219,15 @@ nav {
                         margin-top: 0.8vw;
                         color: $logoBrown;
                     }
+                    &:hover{
+                        font-weight: bold;
+                        transition: 0s;
+                    }
                 }
             }
         }
         .social {
+            width: 202px;
             display: flex;
             justify-content: flex-end;
             .link {
@@ -232,12 +237,23 @@ nav {
                 display: flex;
                 justify-content: center;
                 align-items: flex-end;
+                &:hover{
+                    filter:hue-rotate(270deg);
+                }
             }
         }
     }
     .open {
         height: 100vh;
         padding: 3.5vw 180px;
+    }
+    .menu.active{
+        z-index: 100;
+    }
+    .menu.show:hover{
+        span{
+            font-size: 1.5vw;
+        }
     }
 }
 
@@ -329,17 +345,18 @@ main {
                         display: flex;
                         justify-content: center;
                         align-items: center;
-                        p {
-                            width: 30vw;
+                        
+                            // width: 30vw;
                             font-size: 14px;
                             font-family: Roboto;
                             line-height: 20px;
                             letter-spacing: 1px;
                             color: $brownDark;
-                            height: 11.5vw;
+                            // height: 11.5vw;
                             max-height: max-content;
                             overflow: auto;
-                        }
+                            padding: 0 5vw;
+                        
                         .text-group {
                             padding: 0 2%;
                             p {
@@ -349,14 +366,7 @@ main {
                                 margin-top: 30px;
                             }
                         }
-                        h5 {
-                            position: absolute;
-                            top: 0;
-                            right: 10.5%;
-                            writing-mode: vertical-lr;
-                            letter-spacing: 5px;
-                            transform: translateY(-50%);
-                        }
+                        
                         .more {
                             position: absolute;
                             display: block;
@@ -366,6 +376,16 @@ main {
                             cursor: pointer;
                             display: none;
                         }
+                    }
+                    h5 {
+                        position: absolute;
+                        top: 0;
+                        right: 10.5%;
+                        writing-mode: vertical-lr;
+                        letter-spacing: 5px;
+                        top: 15%;
+                        right: 12.5%;
+                        z-index: 1;
                     }
                     &:nth-child(4) {
                         margin-left: unset;
@@ -380,7 +400,8 @@ main {
                         }
                         h5 {
                             right: unset;
-                            left: 10.5%;
+                            left: 19.5%;
+                            top: 17.5%;
                         }
                     }
                 }
@@ -440,8 +461,37 @@ main {
                                 .link {
                                     margin-top: 2.2vw;
                                     margin-left: auto;
+                                    cursor: pointer;
+                                    position: relative;
                                     span {
                                         margin-right: 14px;
+                                    }
+                                    .light{
+                                        opacity: 0.8;
+                                        position: absolute;
+                                        background-color: #fff;
+                                        width: 10px;
+                                        height: 10px;
+                                        top: 50%;
+                                        right: 0;
+                                        transform: translateY(-50%);
+                                        border-radius: 50%;
+                                        display: none;
+                                    }
+                                    &:hover{
+                                        color: $orange;
+                                        .light{
+                                            display: block;
+                                            animation: light 1s infinite;
+                                            @keyframes light {
+                                                0%{
+                                                    right: 40px;
+                                                }
+                                                100%{
+                                                    right: 0;
+                                                }
+                                            }
+                                        }
                                     }
                                 }
                             }
@@ -562,11 +612,42 @@ main {
                             }
                             .link {
                                 margin-left: calc(100% - 134px);
+                                position: relative;
+                                cursor: pointer;
                                 span {
                                     font-size: 16px;
                                     font-weight: bold;
                                     margin-right: 14px;
                                     color: $brownDark;
+                                }
+                                .light{
+                                    opacity: 0.8;
+                                    position: absolute;
+                                    background-color: #fff;
+                                    width: 10px;
+                                    height: 10px;
+                                    top: 50%;
+                                    right: 0;
+                                    transform: translateY(-50%);
+                                    border-radius: 50%;
+                                    display: none;
+                                }
+                                &:hover{
+                                    span{
+                                        color: $orange;
+                                    }
+                                    .light{
+                                        display: block;
+                                        animation: light 1s infinite;
+                                        @keyframes light {
+                                            0%{
+                                                right: 40px;
+                                            }
+                                            100%{
+                                                right: 0;
+                                            }
+                                        }
+                                    }
                                 }
                             }
                         }
