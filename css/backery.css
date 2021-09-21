@@ -318,7 +318,7 @@ nav .menu.active {
 }
 
 nav .menu.show:hover span {
-  font-size: 1.5vw;
+  font-size: 20px;
 }
 
 main {
@@ -902,6 +902,7 @@ main .thirdSection .container .background ul li {
           align-items: center;
   margin-left: -3.5vw;
   z-index: 6;
+  cursor: pointer;
 }
 
 main .thirdSection .container .background ul li .filter {
@@ -926,10 +927,14 @@ main .thirdSection .container .background ul li .filter {
   font-weight: bold;
   border: 3px solid #603210;
   border-bottom: none;
-  -webkit-transition-duration: 0s;
-          transition-duration: 0s;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
   font-size: 18px;
   cursor: pointer;
+}
+
+main .thirdSection .container .background ul li .filter.active {
+  background-color: #feb768;
 }
 
 main .thirdSection .container .background ul li:hover {
@@ -956,7 +961,6 @@ main .thirdSection .container .background ul li:nth-child(1) .filter {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: #feb768;
 }
 
 main .thirdSection .container .background ul li:nth-child(1):hover {
@@ -1451,8 +1455,8 @@ footer .container .backTop .light {
 }
 
 footer .container .backTop:hover .light {
-  -webkit-animation: effect 3s infinite;
-          animation: effect 3s infinite;
+  -webkit-animation: effect 1.5s infinite;
+          animation: effect 1.5s infinite;
   display: block;
 }
 

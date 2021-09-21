@@ -364,7 +364,7 @@
                     </ul>
                     <div class="swiper-container cardSwiper">
                         <div class="swiper-wrapper productSwiper">
-                                
+
                         </div>
                     </div>
                 </div>
@@ -501,6 +501,7 @@
                 function clearn() {
                     productSwiper.innerHTML = ''
                 }
+
                 function show(x) {
                     if (x == 4) {
                         // element 單類別陣列
@@ -542,7 +543,6 @@
                 }
                 show(4)
             })
-
     </script>
     <!-- scrolling -->
     <script src="./js/scroll.js"></script>
@@ -551,7 +551,9 @@
     <script src="./js/swiper.js"></script>
     <!-- AOS js -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script> AOS.init();</script>
+    <script>
+        AOS.init();
+    </script>
     <!-- menu button -->
     <script src="./js/menu.js"></script>
     <!-- 1st Read more button -->
@@ -565,9 +567,26 @@
         $(document).click(function (e) {
             // $('body').slideUp();
         });
-
     </script>
 
+    <script>
+        const filters = document.querySelectorAll(".filter")
+        clearallbtn();
+        filters[0].classList.add("active")
+        filters.forEach(filter => {
+            filter.addEventListener('click', function () {
+                clearallbtn();
+                this.classList.add("active");
+            })
+        });
+
+        function clearallbtn() {
+            filters.forEach(function (filter, i) {
+
+                filters[i].classList.remove("active");
+            });
+        }
+    </script>
 </body>
 
 </html>
