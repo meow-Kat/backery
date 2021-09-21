@@ -35,6 +35,8 @@ h6 {
 * {
     transition-duration: 0.5s;
     scroll-behavior: smooth;
+    // 鎖選取
+    user-select: none;
 }
 body {
     // background-image: url(/img/background.png);
