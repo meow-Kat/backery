@@ -36,6 +36,10 @@ h6 {
   -webkit-transition-duration: 0.5s;
           transition-duration: 0.5s;
   scroll-behavior: smooth;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 body {
@@ -270,12 +274,40 @@ nav .menuList ul li a span {
   display: block;
   margin-top: 0.8vw;
   color: #a38634;
+  position: relative;
 }
 
-nav .menuList ul li a:hover {
-  font-weight: bold;
-  -webkit-transition: 0s;
-  transition: 0s;
+nav .menuList ul li a span::before {
+  content: '';
+  background-color: #a38634;
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -2px;
+  right: 0;
+}
+
+nav .menuList ul li a:hover span::before, nav .menuList ul li a:focus span::before {
+  -webkit-animation: borderLine 0.5s forwards;
+          animation: borderLine 0.5s forwards;
+}
+
+@-webkit-keyframes borderLine {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes borderLine {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
 }
 
 nav .menuList .social {
