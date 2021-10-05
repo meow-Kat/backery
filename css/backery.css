@@ -1254,6 +1254,14 @@ main .sixthSection .container .containUs div {
   cursor: pointer;
 }
 
+main .sixthSection .container .containUs div:nth-child(1) {
+  margin-right: 3vw;
+}
+
+main .sixthSection .container .containUs div:nth-child(2) {
+  margin-left: 3vw;
+}
+
 main .sixthSection .container .containUs div span {
   position: absolute;
   top: 50%;
@@ -1263,6 +1271,7 @@ main .sixthSection .container .containUs div span {
   font-size: 1.25vw;
   color: #fff6e1;
   font-weight: bold;
+  margin-bottom: 5vw;
 }
 
 main .sixthSection .container .containUs div span:nth-child(2) {
