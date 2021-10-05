@@ -957,6 +957,7 @@ main {
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                margin-left: 5vw;
                 div {
                     width: 29vw;
                     height: 29vw;
@@ -971,6 +972,7 @@ main {
                         font-size: 1.25vw;
                         color: $yellow;
                         font-weight: bold;
+                        margin-bottom: 5vw;
                         &:nth-child(2) {
                             width: max-content;
                             font-size: 2.5vw;
